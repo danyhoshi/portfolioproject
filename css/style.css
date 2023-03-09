@@ -1,0 +1,57 @@
+:root {
+  --color-base-bg: #1b1a17;
+  --color-light-bg: #1f1e1b;
+  --color-pri-text: #f0e3ca;
+  --color-title-text: #ff8303;
+  --font-family: 'Inconsolata', monospace;
+  --font-family-logo: 'Anton', sans-serif;
+  --font-family-logo-sec: 'Inter', sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  color: var(--color-pri-text);
+  background-color: var(--color-base-bg);
+}
+
+h1 {
+  font-family: var(--font-family);
+  color: var(--color-title-text);
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 25px;
+}
+
+h2 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 25px;
+}
+
+p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.logo-symbol {
+  color: var(--color-title-text);
+  font-family: var(--font-family-logo-sec);
+  font-weight: 600;
+}
+
+.logo {
+  font-family: var(--font-family-logo);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 25px;
+}
+
+.orange {
+  color: var(--color-title-text);
+  font-family: var(--font-family-logo);
+}
