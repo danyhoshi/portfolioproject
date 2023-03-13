@@ -194,7 +194,6 @@ img {
   width: 75%;
 }
 
-
 .container-profile p {
   font: calc(var(--p-size-small) + 2vw)/var(--p-size-small);
   overflow: hidden;
