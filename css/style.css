@@ -173,28 +173,33 @@ img {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  height: 50vh;
+  width: 100%;
+  max-width: 28.1rem;
+  max-height: 43vh;
 }
 
 .container-profile > div {
   position: absolute;
-  left: calc(50% - 80% / 2);
-  top: calc(50vh - 80%);
-  z-index: 999;
-  width: 80%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.container-profile > img {
-  width: 100%;
-  text-align: center;
+.container-profile img {
+  width: 75%;
 }
+
 
 .container-profile p {
   font: calc(var(--p-size-small) + 2vw)/var(--p-size-small);
   overflow: hidden;
   color: rgba(163, 87, 9, 0.5);
-  width: 100%;
+  width: 90%;
   text-align: left;
 }
 
