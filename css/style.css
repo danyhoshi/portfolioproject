@@ -6,6 +6,9 @@
   --font-family: 'Inconsolata', monospace;
   --font-family-logo: 'Anton', sans-serif;
   --font-family-logo-sec: 'Inter', sans-serif;
+  --p-size: 1rem;
+  --p-size-small: 0.1rem;
+  --header-height: 5rem;
 }
 
 html,
@@ -15,6 +18,8 @@ body {
   font-family: var(--font-family);
   color: var(--color-pri-text);
   background-color: var(--color-base-bg);
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -27,15 +32,69 @@ h1 {
 
 h2 {
   font-family: var(--font-family);
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 25px;
+  color: var(--color-title-text);
+  font-weight: 900;
+  font-size: calc(var(--p-size) + 4vw);
+  line-height: calc(var(--p-size) + 3vw);
 }
 
-p {
+h3 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: calc(var(--p-size) + 3vw);
+  line-height: calc(var(--p-size) + 3vw);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-pri-text);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.presentation-container p {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 20px;
+  font-size: calc(var(--p-size) + 1vw);
+  line-height: calc(var(--p-size) + 1vw);
+  text-align: justify;
+}
+
+.opacity {
+  color: var(--color-sec-text);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--color-base-bg);
+  z-index: 999;
+}
+
+.menu-btn {
+  color: var(--color-pri-text);
+  border: none;
+  padding: 0 1rem 0 0;
+  background-color: transparent;
+  transition: transform 0.5s ease;
+  cursor: pointer;
 }
 
 .logo-symbol {
@@ -46,12 +105,113 @@ p {
 
 .logo {
   font-family: var(--font-family-logo);
+  font-size: calc(1.5rem + 1.5vw);
   font-weight: 400;
-  font-size: 32px;
-  line-height: 25px;
+  line-height: 1.56rem;
+  padding: 0 0 0 1rem;
 }
 
 .orange {
   color: var(--color-title-text);
   font-family: var(--font-family-logo);
+}
+
+.navbar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  left: 0;
+  top: var(--header-height);
+  width: 100%;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+
+.container-svg {
+  cursor: pointer;
+}
+
+.container-svg svg {
+  fill: var(--color-pri-text);
+}
+
+.navbar-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.none {
+  display: none;
+}
+
+.navbar a {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.container {
+  min-height: 100vh;
+}
+
+.container-headline {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  letter-spacing: 0.025em;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: 4rem 0 0 0;
+}
+
+.container-profile {
+  display: flex;
+  position: relative;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 28.1rem;
+  max-height: 43vh;
+}
+
+.container-profile > div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-profile img {
+  width: 75%;
+}
+
+.container-profile p {
+  font: calc(var(--p-size-small) + 2vw)/var(--p-size-small);
+  overflow: hidden;
+  color: rgba(163, 87, 9, 0.5);
+  width: 90%;
+  text-align: left;
+}
+
+.presentation-container {
+  width: 80%;
+  text-align: center;
+}
+
+.navbar a:hover {
+  color: var(--color-pri-text);
+  background-color: var(--color-btn-bg);
+}
+
+.menu-btn:active {
+  transform: rotate(360deg);
 }
