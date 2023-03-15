@@ -16,10 +16,42 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <h1>Alexey Borisov</h1>
-    <h2>Frontend Developer</h2>
-    <p>Frontend developer looking for ideas and projects for himself and others</p>
-    <p class="logo"><span class="logo-symbol">&lt;/</span><span class="orange">O</span>ntalex<span class="logo-symbol">&gt;</span></p>
+    <div class="container">
+        <header class="header-container">
+        
+            <div class="logo">
+                <a href="index.html"><span class="logo-symbol">&lt;/</span><span class="orange">D</span>aniela<span class="logo-symbol">&gt;</span></a>
+            </div>
+            
+            <button type="button" class="menu-btn">
+               <div class="container-svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M5.25 37.25V32.7h37.5v4.55Zm0-10.95v-4.55h37.5v4.55Zm0-11v-4.6h37.5v4.6Z"/></svg>
+               </div>
+                <div class="container-svg none">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M12.45 38.7 9.3 35.55 20.85 24 9.3 12.5l3.15-3.2L24 20.8 35.55 9.3l3.15 3.2L27.2 24l11.5 11.55-3.15 3.15L24 27.2Z"/></svg>
+                </div>
+            </button>
     
+            <nav class="navbar">
+                <a href="">About me</a>
+                <a href="">Skills</a>
+                <a href="">Projects</a>
+                <a href="">Contact</a>
+            </nav>
+        </header>
+        <main>
+            <section class="container-headline">
+                <div class="presentation-container">
+                    <h2>Daniela González</h2>
+                    <h3>Frontend Developer</h3>
+                    <p> I am a Computer Scientist and a Frontend Developer. I like to learn new things and practice them!</p>
+                </div>
+                <div class="container-profile">
+                    <p>let button_menu = document.querySelector(".header_button"); <br> let float_menu = document.querySelector(".header_menu--float"); <br> let line_top = document.querySelector(".header_button_line--top"); <br> let line_under = document.querySelector(".header_button_line--bottom"); <br> button_menu.isSelected = false; function addEffectWriting(element, time) { let element_array = element.innerText.split(""); <br> element.count = 0; <br> element.innerText = ""; <br> function writeSymbols() { element.innerText += element_array[element.count]; <br> element.count++; <br> if (element.count <= element_array.length) { setTimeout(() => { writeSymbols(); <br> }, time); } else if (element.count >= element_array.length) { element.count = 0; <br> element.innerText = ""; <br> writeSymbols(); <br> } } writeSymbols(); <br>}</p>
+                        <div><img src="./img/profile.png" alt="profile"></div>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
