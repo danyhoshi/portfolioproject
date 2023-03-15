@@ -207,6 +207,77 @@ img {
   text-align: center;
 }
 
+.about-me {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-light-bg);
+  width: 100%;
+  padding-top: 10%;
+  padding-bottom: 7%;
+  border-top: solid 4rem var(--color-base-bg);
+  border-bottom: solid 1px var(--color-base-bg);
+}
+
+.about-me p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  width: 80%;
+  font-size: calc(var(--p-size) + 1vw);
+  line-height: calc(var(--p-size) + 1vw);
+  text-align: left;
+}
+
+.title-section {
+  color: var(--color-title-text);
+  text-align: center;
+}
+
+.works,
+.my-skills {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-base-bg);
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.skill {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  box-sizing: border-box;
+  font-size: calc(var(--p-size) + 1.5vw);
+  line-height: calc(var(--p-size) + 1.5vw);
+  padding-left: 2rem;
+  width: 75%;
+  height: 4.5rem;
+  background-color: var(--color-light-bg);
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+.skill div {
+  width: 2.5rem;
+}
+
+.skill div:last-child {
+  display: none;
+}
+
+.skill:hover div:last-child {
+  display: block;
+}
+
+.skill:hover div:first-child {
+  display: none;
+}
+
 .navbar a:hover {
   color: var(--color-pri-text);
   background-color: var(--color-btn-bg);
