@@ -3,6 +3,7 @@
   --color-light-bg: #1f1e1b;
   --color-pri-text: #f0e3ca;
   --color-title-text: #ff8303;
+  --color-base-bg-transp: #1f1e1bf7;
   --font-family: 'Inconsolata', monospace;
   --font-family-logo: 'Anton', sans-serif;
   --font-family-logo-sec: 'Inter', sans-serif;
@@ -41,8 +42,24 @@ h2 {
 h3 {
   font-family: var(--font-family);
   font-weight: 700;
-  font-size: calc(var(--p-size) + 3vw);
+  font-size: calc(var(--p-size) + 2vw);
   line-height: calc(var(--p-size) + 3vw);
+}
+
+h4 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: calc(var(--p-size) + 2vw);
+  color: var(--color-title-text);
+  margin: 2rem 0 0.2rem 0;
+  text-align: center;
+}
+
+h5 {
+  text-align: center;
+  font: var(--font-family);
+  font-size: calc(var(--p-size) + 0.5vw);
+  margin: 1rem 0 0.5rem 0;
 }
 
 a {
@@ -221,11 +238,8 @@ img {
 }
 
 .about-me p {
-  font-family: var(--font-family);
-  font-weight: 400;
+  font: calc(var(--p-size) + 1vw) var(--font-family);
   width: 80%;
-  font-size: calc(var(--p-size) + 1vw);
-  line-height: calc(var(--p-size) + 1vw);
   text-align: left;
 }
 
@@ -240,6 +254,7 @@ img {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
   background-color: var(--color-base-bg);
   width: 100%;
   margin-top: 3rem;
@@ -252,8 +267,7 @@ img {
   align-items: center;
   gap: 1rem;
   box-sizing: border-box;
-  font-size: calc(var(--p-size) + 1.5vw);
-  line-height: calc(var(--p-size) + 1.5vw);
+  font-size: calc(var(--p-size) + 1vw);
   padding-left: 2rem;
   width: 75%;
   height: 4.5rem;
@@ -266,8 +280,107 @@ img {
   width: 2.5rem;
 }
 
+.work-info div {
+  display: flex;
+  width: 100%;
+}
+
 .skill div:last-child {
   display: none;
+}
+
+.work-card {
+  display: flex;
+  position: relative;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 80%;
+  max-width: 23.7rem;
+  min-width: 15rem;
+  max-height: 23.7rem;
+  min-height: 15rem;
+  margin: 1rem 0 1rem 0;
+}
+
+.container-project {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  max-width: 23.7rem;
+  min-width: 15rem;
+  max-height: 23.7rem;
+  min-height: 15rem;
+}
+
+.work-card img {
+  width: 100%;
+  height: 100%;
+  object-position: bottom;
+  object-fit: cover; /* in the case of non-square images */
+  user-select: none;
+}
+
+.work-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 99;
+  pointer-events: auto;
+  background-color: var(--color-base-bg-transp);
+  width: 100%;
+  height: 100%;
+  min-width: 15rem;
+  max-width: 23.7rem;
+  min-height: 15rem;
+  max-height: 23.7rem;
+  font: var(--font-family);
+  opacity: 1;
+}
+
+.works > div > div .text {
+  width: 80%;
+  text-align: left;
+  font-size: calc(var(--p-size));
+  min-height: 4vh;
+  overflow: hidden;
+  margin: 1rem 1rem;
+}
+
+.work-info button {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  height: 56px;
+  color: var(--color-pri-text);
+  font: 600 var(--font-family) calc(var(--p-size) + 1vw)/var(--p-size);
+  text-align: center;
+  background-color: #32312e;
+  border-radius: 6px;
+  border-color: transparent;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.line {
+  border-top: 1px solid var(--color-title-text);
+  height: 1px;
+  max-width: 70%;
+  padding: 0;
+  text-align: center;
+}
+
+.work-card:hover .work-info {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .skill:hover div:last-child {
