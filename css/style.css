@@ -313,6 +313,7 @@ img {
   min-width: 15rem;
   max-height: 23.7rem;
   min-height: 15rem;
+  border: 2px solid var(--color-base-bg-transp);
 }
 
 .work-card img {
