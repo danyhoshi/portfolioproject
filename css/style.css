@@ -80,7 +80,7 @@ textarea {
   border: 1px solid var(--color-pri-text);
   border-bottom: 1px solid var(--color-pri-text);
   border-radius: 3px;
-  line-height: 15px; /*para asegurarnos de que el texto este centrado verticalmente respecto al height */
+  line-height: 15px;
   padding: 0 40px 0 10px;
 }
 
@@ -393,14 +393,13 @@ textarea {
   text-align: center;
 }
 
-
 .form {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  font: calc(var(--p-size)  + 1vw);
+  font: calc(var(--p-size) + 1vw);
   width: 100%;
   box-sizing: border-box;
 }
@@ -441,7 +440,7 @@ textarea {
   border-bottom: 1px solid var(--color-pri-text);
   border-radius: 3px;
   height: 45px;
-  line-height: 15px; 
+  line-height: 15px;
   padding: 0 40px 0 10px;
 }
 
