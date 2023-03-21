@@ -81,7 +81,29 @@ textarea {
   border-bottom: 1px solid var(--color-pri-text);
   border-radius: 3px;
   line-height: 15px;
-  padding: 0 40px 0 10px;
+  padding: 10px 40px 10px 10px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 3rem;
+  background-color: var(--color-light-bg);
+}
+
+footer p {
+  width: 100%;
+  padding: 0 2rem;
+  color: var(--color-pri-text);
 }
 
 .presentation-container p {
@@ -183,6 +205,8 @@ textarea {
 
 .container {
   min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 .container-headline {
@@ -191,7 +215,7 @@ textarea {
   justify-content: space-around;
   letter-spacing: 0.025em;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   padding: 4rem 0 0 0;
 }
@@ -203,7 +227,7 @@ textarea {
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 28.1rem;
+  max-width: 24rem; /* 28.1rem */
   max-height: 43vh;
 }
 
@@ -296,6 +320,23 @@ textarea {
 .work-info div {
   display: flex;
   width: 100%;
+}
+
+.contacts li {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+  align-items: center;
+  color: var(--color-title-text);
+  box-sizing: border-box;
+  font-size: calc(var(--p-size));
+  width: 75%;
+  height: 4.5rem;
+  padding-left: 1rem;
+}
+
+.contacts a {
+  color: var(--color-title-text);
 }
 
 .skill div:last-child {
@@ -401,6 +442,7 @@ textarea {
   gap: 1rem;
   font: calc(var(--p-size) + 1vw);
   width: 100%;
+  padding-bottom: 3rem;
   box-sizing: border-box;
 }
 
@@ -487,19 +529,27 @@ textarea:focus {
   pointer-events: none;
 }
 
+.title-contacts {
+  font-family: var(--font-family-logo);
+  font-weight: 400;
+  font-size: calc(var(--p-size) + 2vw);
+  color: var(--color-title-text);
+  margin-bottom: 0;
+  margin-top: 2rem;
+}
+
+.contacts {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
 .skill:hover div:last-child {
   display: block;
 }
 
 .skill:hover div:first-child {
   display: none;
-}
-
-.navbar a:hover {
-  color: var(--color-pri-text);
-  background-color: var(--color-btn-bg);
-}
-
-.menu-btn:active {
-  transform: rotate(360deg);
 }
