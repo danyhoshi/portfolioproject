@@ -112,6 +112,7 @@ footer p {
   font-size: calc(var(--p-size) + 1vw);
   line-height: calc(var(--p-size) + 1vw);
   text-align: justify;
+  width: 100%;
 }
 
 .opacity {
@@ -552,4 +553,63 @@ textarea:focus {
 
 .skill:hover div:first-child {
   display: none;
+}
+
+@media screen and (orientation: landscape) {
+  .container-headline {
+    padding-left: 1rem;
+    flex-direction: row;
+  }
+
+  .container-profile {
+    width: 50%;
+  }
+
+  .presentation-container {
+    width: 50%;
+    text-align: left;
+  }
+
+  .container-profile img {
+    width: 80%;
+  }
+
+  .container-profile p {
+    font: calc(var(--p-size-small) + 1vw)/var(--p-size-small);
+    overflow: hidden;
+    width: 90%;
+    min-height: 60vh;
+  }
+
+  .presentation-container p {
+    font-size: calc(var(--p-size) + 0.5vw);
+  }
+
+  h2 {
+    font-size: calc(var(--p-size) + 2vw);
+  }
+
+  h3 {
+    font-size: calc(var(--p-size) + 1vw);
+    line-height: var(--p-size);
+  }
+
+  @media screen and (max-height: 281px) {
+    .presentation-container p {
+      font-size: var(--p-size);
+    }
+
+    h2 {
+      font-size: calc(var(--p-size) + 1vw);
+    }
+
+    h3 {
+      font-size: calc(var(--p-size) + 0.5vw);
+      line-height: var(--p-size);
+    }
+
+    .container-profile img {
+      width: 53%;
+    }
+  }
 }
