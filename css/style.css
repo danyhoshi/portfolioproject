@@ -102,6 +102,7 @@ footer {
   margin-top: auto;
   padding-top: 3rem;
   background-color: var(--color-light-bg);
+  width: 100%;
 }
 
 footer div {
