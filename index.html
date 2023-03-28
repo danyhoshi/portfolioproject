@@ -50,20 +50,20 @@
                 </div>
                 <div class="container-profile">
                     <p>let button_menu = document.querySelector(".header_button"); <br> 
-                        let float_menu = document.querySelector(".header_menu--float"); <br> 
+                        let float_menu = document.querySelector(".header_menu--float"); <br><br> 
                         let line_top = document.querySelector(".header_button_line--top"); <br> 
-                        let line_under = document.querySelector(".header_button_line--bottom"); <br> 
-                        button_menu.isSelected = false; <br>
-                        &nbsp;function addEffectWriting(element, time) { let element_array = element.innerText.split(""); <br> 
+                        let line_under = document.querySelector(".header_button_line--bottom"); <br><br> 
+                        button_menu.isSelected = false; <br><br>
+                        &nbsp;function addEffectWriting(element, time) { let element_array = element.innerText.split(""); <br><br> 
                         &nbsp; &nbsp;element.count = 0; <br> 
-                        &nbsp; &nbsp;element.innerText = ""; <br> 
+                        &nbsp; &nbsp;element.innerText = ""; <br><br> 
                         &nbsp; function writeSymbols() { element.innerText += element_array[element.count]; <br> 
                             &nbsp;element.count++; <br> 
-                            &nbsp;if (element.count &lt;= element_array.length) { setTimeout(() => { writeSymbols(); <br> 
+                            &nbsp;if (element.count &lt;= element_array.length) { setTimeout(() => { writeSymbols(); <br> <br>
                                 &nbsp; }, time); } else if (element.count >= element_array.length) { element.count = 0; <br> 
-                                    &nbsp; element.innerText = ""; <br> 
+                                    &nbsp; element.innerText = ""; <br> <br>
                                     &nbsp;writeSymbols(); <br> } } writeSymbols(); <br>
-                            }</p>
+                            } ...</p>
                         <div><img src="./img/profile.png" alt="profile"></div>
                 </div>
             </section>
