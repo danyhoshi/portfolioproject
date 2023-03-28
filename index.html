@@ -12,13 +12,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="./css/style.css">
     <title>Portfolio</title>
 </head>
 <body>
     <div class="container">
         <header class="header-container">
-        
             <div class="logo">
                 <a href="index.html"><span class="logo-symbol">&lt;/</span><span class="orange">D</span>aniela<span class="logo-symbol">&gt;</span></a>
             </div>
@@ -31,13 +31,15 @@
                     <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M12.45 38.7 9.3 35.55 20.85 24 9.3 12.5l3.15-3.2L24 20.8 35.55 9.3l3.15 3.2L27.2 24l11.5 11.55-3.15 3.15L24 27.2Z"/></svg>
                 </div>
             </button>
-    
-            <nav class="navbar">
-                <a href="">About me</a>
-                <a href="">Skills</a>
-                <a href="">Projects</a>
-                <a href="">Contact</a>
-            </nav>
+         <nav>
+            <ul class="navbar">
+                <li><a href="#aboutme">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Pet-Projects</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+         </nav>   
+            
         </header>
         <main>
             <section class="container-headline">
@@ -47,18 +49,32 @@
                     <p> I am a Computer Scientist and a Frontend Developer. I like to learn new things and practice them!</p>
                 </div>
                 <div class="container-profile">
-                    <p>let button_menu = document.querySelector(".header_button"); <br> let float_menu = document.querySelector(".header_menu--float"); <br> let line_top = document.querySelector(".header_button_line--top"); <br> let line_under = document.querySelector(".header_button_line--bottom"); <br> button_menu.isSelected = false; function addEffectWriting(element, time) { let element_array = element.innerText.split(""); <br> element.count = 0; <br> element.innerText = ""; <br> function writeSymbols() { element.innerText += element_array[element.count]; <br> element.count++; <br> if (element.count <= element_array.length) { setTimeout(() => { writeSymbols(); <br> }, time); } else if (element.count >= element_array.length) { element.count = 0; <br> element.innerText = ""; <br> writeSymbols(); <br> } } writeSymbols(); <br>}</p>
+                    <p>let button_menu = document.querySelector(".header_button"); <br> 
+                        let float_menu = document.querySelector(".header_menu--float"); <br> 
+                        let line_top = document.querySelector(".header_button_line--top"); <br> 
+                        let line_under = document.querySelector(".header_button_line--bottom"); <br> 
+                        button_menu.isSelected = false; <br>
+                        &nbsp;function addEffectWriting(element, time) { let element_array = element.innerText.split(""); <br> 
+                        &nbsp; &nbsp;element.count = 0; <br> 
+                        &nbsp; &nbsp;element.innerText = ""; <br> 
+                        &nbsp; function writeSymbols() { element.innerText += element_array[element.count]; <br> 
+                            &nbsp;element.count++; <br> 
+                            &nbsp;if (element.count &lt;= element_array.length) { setTimeout(() => { writeSymbols(); <br> 
+                                &nbsp; }, time); } else if (element.count >= element_array.length) { element.count = 0; <br> 
+                                    &nbsp; element.innerText = ""; <br> 
+                                    &nbsp;writeSymbols(); <br> } } writeSymbols(); <br>
+                            }</p>
                         <div><img src="./img/profile.png" alt="profile"></div>
                 </div>
             </section>
-            <section class="about-me">
+            <section id="aboutme" class="about-me">
                 <div>
                     <img src="./img/Logo.png" alt="logo">
                 </div>
                 <p>A few years ago, I became interested in developing websites and interfaces. Since then, I have been steadily improving my skills. Now I am developing websites and web applications to order or for myself.</p>
             </section>
-            <section class="my-skills">
-                <h3 class="title-section">My Skills</h3>
+            <h3 id="skills" class="title-section">My Skills</h3>
+            <section" class="my-skills">
                 <div class="skill">
                    <div><img src="/img/icon-html.png" alt="icon-html"></div>
                    <div><img src="/img/icon-html-hover.png" alt="icon-html-hover"></div>
@@ -77,12 +93,12 @@
                     <div><img src="/img/icon-git.png" alt="icon-git"></div><div><img src="/img/icon-git-hover.png" alt="icon-git-hover"></div> Git
                  </div>
             </section>
-            <section class="works">
+            <section id="projects" class="works">
                 <h3 class="title-section">My Works</h3>
                 <div class="work-card">
                     <div class="container-project"><img src="./img/project.png" alt="project"></div>
                     <div class="work-info">
-                        <h4>New Blog</h4>
+                        <h4>News Blog</h4>
                         <h5>HTML, CSS, JS</h5>
                         <div class="line"></div>
                         <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt voluptate expedita impedit itaque mollitia, qui hic cupiditate magni quaerat.</p>
@@ -92,7 +108,7 @@
                 <div class="work-card">
                     <div class="container-project"><img src="./img/project.png" alt="project"></div>
                     <div class="work-info">
-                        <h4>New Blog</h4>
+                        <h4>News Blog</h4>
                         <h5>HTML, CSS, JS</h5>
                         <div class="line"></div>
                         <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt voluptate expedita impedit itaque mollitia, qui hic cupiditate magni quaerat.</p>
@@ -102,7 +118,7 @@
                 <div class="work-card">
                     <div class="container-project"><img src="./img/project.png" alt="project"></div>
                     <div class="work-info">
-                        <h4>New Blog</h4>
+                        <h4>News Blog</h4>
                         <h5>HTML, CSS, JS</h5>
                         <div class="line"></div>
                         <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt voluptate expedita impedit itaque mollitia, qui hic cupiditate magni quaerat.</p>
@@ -111,6 +127,93 @@
                 </div>
             </section>
         </main>
+        <footer>
+            <section class="contact">
+                <h3 id="contacts" class="title-section">Get in touch</h3>
+                <form action="https://formspree.io/f/xwkjnvdr" method="POST" class="form">
+                    <div class="group__form">
+                        <label for="name" class="label__form">Name</label>
+                        <div class="group-input__form">
+                            <input type="text" class="input__form" name="name" id="name" placeholder="John" maxlength="30" required>
+                            <span class="validation-state__form material-symbols-outlined">cancel</span>
+                        </div>
+                        <p class="input-error__form">The name must only have letters and spaces.</p>
+                    </div>
+                    
+                    <div class="group__form">
+                        <label for="lastname" class="label__form">Last Name</label>
+                        <div class="group-input__form">
+                            <input type="text" class="input__form" name="lastname" id="lastname" placeholder="Doe" maxlength="30" required>
+                            <span class="validation-state__form material-symbols-outlined">cancel</span>
+                        </div>
+                        <p class="input-error__form">The name must only have letters and spaces.</p>
+                    </div>
+
+                <div class="group__form">
+                        <label for="email" class="label__form">Email</label>
+                        <div class="group-input__form">
+                            <input type="email" class="input__form" name="email" id="email" placeholder="johndoe@email.com" required>
+                            <span class="validation-state__form material-symbols-outlined">cancel</span>
+                        </div>
+                        <p class="input-error__form">Please insert a valid email address</p>
+                    </div>
+        
+                    <div class="group__form">
+                        <label for="message" class="label__form" required>Message</label>
+                        <div class="group-input__form">
+                            <textarea maxlength="500" rows="10" cols="60" name="message" placeholder="Let's talk about projects..."></textarea>
+                        </div>
+                        <p class="input-error__form">Please insert a message</p>
+                    </div>
+        
+                    <div class="message__form">
+                        <p><span class="material-symbols-outlined">warning</span><b>Error: </b>Please fill in the form correctly</p>
+                    </div>
+        
+                    <div class="group__form-btn-form">
+                        <button type="submit" class="btn__form">Submit</button>
+                        <p class="submit-success__form">The form was sent successfully</p>
+                    </div> 
+                </form>
+            </section>
+            <div>
+                <div class="logo">
+                    <a href="index.html"><span class="logo-symbol">&lt;/</span><span class="orange">D</span>aniela<span class="logo-symbol">&gt;</span></a>
+                </div>
+                <p>If you liked my work and you need me, I'm ready to talk to you.</p>
+            </div>
+         
+            <div>
+                <h3 class="title-contacts">Contacts</h3>
+                <ul class="contacts">
+                    <li>
+                        <a href="mailto:1989.daniela@gmail.com"><svg width="28" height="27" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24.6667 26.8333H3.33332C2.62608 26.8333 1.9478 26.5523 1.44771 26.0523C0.947609 25.5522 0.666656 24.8738 0.666656 24.1666V9.56528C0.68882 9.12459 0.818359 8.69594 1.04401 8.31667C1.26965 7.93739 1.58455 7.61907 1.96132 7.38928L12.628 0.989307C13.0423 0.740895 13.5163 0.60968 13.9993 0.60968C14.4824 0.60968 14.9563 0.740895 15.3707 0.989307L26.0373 7.38928C26.8386 7.87331 27.3307 8.73998 27.3333 9.67598V24.1666C27.3333 24.8738 27.0524 25.5522 26.5523 26.0523C26.0522 26.5523 25.3739 26.8333 24.6667 26.8333ZM3.33332 10.6573V24.1666H24.6667V10.6573L14 17.7679L3.33332 10.6573ZM14 3.27597L5.08799 8.62265L14 14.564L22.9107 8.62265L14 3.27597Z" fill="#F0E3CA"/>
+                        </svg></a>
+                        <a href="mailto:1989.daniela@gmail.com">1989.daniela@gmail.com</a>
+                    </li>
+                        
+                    <li>
+                        <a href="https://twitter.com/Dany_hoshi"><svg width="32" height="33" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="M23.4 5c-.1-.2-.4-.2-.6-.1-.2.1-.5.2-.7.3.3-.4.6-.9.8-1.5.1-.2 0-.4-.2-.5s-.4-.1-.5 0c-.8.5-1.6.8-2.5 1-.9-.9-2.2-1.4-3.5-1.4-2.8 0-5 2.2-5 4.9v.5C8 7.8 5 6.2 2.9 3.7c-.1-.1-.3-.2-.4-.2-.2 0-.3.1-.4.2-.4.8-.7 1.7-.7 2.5 0 1 .3 2 .9 2.9 0 0-.1-.1-.2-.1-.1-.1-.3 0-.5 0-.1.1-.2.3-.2.4 0 1.6.8 3.1 2 4-.1 0-.2.1-.3.2-.1.1-.2.3-.1.4.5 1.6 1.8 2.8 3.4 3.2-1.6.9-3.5 1.3-5.4 1.1-.2 0-.4.1-.5.3-.1.2 0 .4.2.6 2.2 1.4 4.6 2.1 7.2 2.1 8.4 0 13.3-6.7 13.3-13.1v-.3c.8-.6 1.6-1.4 2.2-2.3.1-.2.1-.5 0-.6z" fill="#ffffff" class="fill-000000"></path></svg></a>
+                        <a href="https://twitter.com/Dany_hoshi">@dany_hoshi</a>
+                    </li>
+    
+                    <li>
+                        <a href="https://github.com/danyhoshi"><svg width="32" height="33" viewBox="0 0 32 33" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 0.896019C7.161 0.896019 0 8.06302 0 16.896C0 23.9691 4.584 29.964 10.937 32.079C11.74 32.23 12.03 31.735 12.03 31.307C12.03 30.927 12.021 29.922 12.015 28.588C7.562 29.552 6.624 26.437 6.624 26.437C5.895 24.5931 4.843 24.098 4.843 24.098C3.395 23.109 4.958 23.13 4.958 23.13C6.562 23.239 7.406 24.775 7.406 24.775C8.83299 27.223 11.15 26.515 12.067 26.103C12.207 25.072 12.624 24.363 13.078 23.968C9.52602 23.567 5.791 22.192 5.791 16.061C5.791 14.31 6.411 12.884 7.436 11.764C7.259 11.363 6.717 9.73301 7.577 7.52902C7.577 7.52902 8.91604 7.10202 11.977 9.17004C13.2809 8.81538 14.6258 8.63351 15.977 8.62901C17.337 8.638 18.696 8.81599 19.977 9.17004C23.02 7.10202 24.358 7.52902 24.358 7.52902C25.217 9.73301 24.675 11.362 24.519 11.764C25.534 12.884 26.154 14.311 26.154 16.061C26.154 22.206 22.414 23.5611 18.858 23.952C19.414 24.431 19.935 25.416 19.935 26.911C19.935 29.051 19.915 30.775 19.915 31.296C19.915 31.712 20.195 32.212 21.019 32.051C27.419 29.958 31.998 23.958 31.998 16.895C31.998 8.06202 24.837 0.89502 15.998 0.89502L16 0.896019Z" fill="#F0E3CA"/>
+                        </svg></a>
+                        <a href="https://github.com/danyhoshi">@danyhoshi</a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://www.figma.com/files/user/1191089961734974624?fuid=1191089961734974624"><svg width="22" height="33" viewBox="0 0 22 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.22 0.5C2.95734 0.5 0.333337 3.23733 0.333337 6.59067C0.333337 8.62933 1.304 10.44 2.796 11.5453C2.02704 12.1214 1.40375 12.8697 0.976089 13.7301C0.548428 14.5905 0.328295 15.5392 0.333337 16.5C0.333337 18.54 1.304 20.3493 2.796 21.4547C2.02704 22.0308 1.40375 22.779 0.976089 23.6395C0.548428 24.4999 0.328295 25.4485 0.333337 26.4093C0.333337 29.7627 2.95734 32.5 6.22 32.5C9.48134 32.5 12.1067 29.7627 12.1067 26.4093V21.26C13.1378 22.1197 14.4375 22.591 15.78 22.592C19.0427 22.5907 21.6667 19.8533 21.6667 16.5C21.672 15.5391 21.452 14.5904 21.0243 13.7299C20.5967 12.8694 19.9732 12.1212 19.204 11.5453C19.973 10.9692 20.5963 10.221 21.0239 9.36055C21.4516 8.50013 21.6717 7.55149 21.6667 6.59067C21.6667 3.23733 19.0427 0.5 15.78 0.5H6.22ZM2.54534 6.59067C2.54534 4.46933 4.20134 2.77067 6.22 2.77067H9.89334V10.4107H6.22C4.20134 10.4107 2.54534 8.71067 2.54534 6.59067ZM15.78 10.4093H12.1067V2.76933H15.78C17.8 2.76933 19.4547 4.46933 19.4547 6.59067C19.4547 8.71067 17.8 10.4093 15.78 10.4093ZM2.54667 16.5C2.54667 14.38 4.20267 12.68 6.22134 12.68H9.89467V20.32H6.22C4.2 20.32 2.54534 18.62 2.54534 16.5H2.54667ZM12.1067 16.5C12.1067 14.38 13.7627 12.68 15.7813 12.68C17.8013 12.68 19.456 14.3787 19.456 16.5C19.456 18.62 17.8013 20.32 15.7813 20.32C13.7627 20.32 12.108 18.6213 12.108 16.5H12.1067ZM2.54667 26.4093C2.54667 24.2893 4.20267 22.5907 6.22134 22.5907H9.89467V26.4093C9.89467 28.5307 8.24134 30.2293 6.22134 30.2293C4.20267 30.2293 2.54667 28.5307 2.54667 26.4093Z" fill="#F0E3CA"/>
+                        </svg></a>
+                        <a href="https://www.figma.com/files/user/1191089961734974624?fuid=1191089961734974624">Daniela González</a>
+                    </li>
+                </ul>
+            </div> 
+        </footer>
     </div>
 </body>
 </html>
