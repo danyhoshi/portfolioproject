@@ -10,7 +10,7 @@
   --font-family-logo-sec: 'Inter', sans-serif;
   --p-size: 1rem;
   --p-size-small: 0.1rem;
-  --header-height: 5rem;
+  --header-height: 4rem;
 }
 
 html,
@@ -263,6 +263,7 @@ footer p {
   width: 100%;
   max-width: 24rem; /* 28.1rem */
   max-height: 43vh;
+  user-select: none;
 }
 
 .container-profile > div {
@@ -317,6 +318,7 @@ footer p {
 .title-section {
   color: var(--color-title-text);
   text-align: center;
+  margin: 3rem 0 0 0;
 }
 
 .works,
@@ -328,7 +330,6 @@ footer p {
   gap: 1rem;
   background-color: var(--color-base-bg);
   width: 100%;
-  margin-top: 3rem;
 }
 
 .skill {
@@ -663,7 +664,6 @@ footer p {
     gap: 1rem;
     background-color: var(--color-base-bg);
     width: 100%;
-    margin-top: 3rem;
   }
 
   .skill {
@@ -817,5 +817,69 @@ footer p {
     .container-profile img {
       width: 100%;
     }
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1360px) {
+  .container-headline {
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding-top: 0;
+  }
+
+  .header-container {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    top: auto;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    height: var(--header-height);
+  }
+
+  .logo {
+    width: auto;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  nav {
+    display: inline-block;
+    width: 50%;
+  }
+
+  .navbar {
+    position: relative;
+    top: 0;
+    width: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .works,
+  .my-skills {
+    flex-flow: row nowrap;
+  }
+
+  .skill {
+    width: 15%;
+    height: 19rem;
+  }
+
+  footer > div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
   }
 }
