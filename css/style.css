@@ -303,8 +303,8 @@ footer p {
   align-items: center;
   background-color: var(--color-light-bg);
   width: 100%;
-  padding-top: 10%;
-  padding-bottom: 7%;
+  padding-top: var(--header-height);
+  padding-bottom: var(--header-height);
   border-top: solid 4rem var(--color-base-bg);
   border-bottom: solid 1px var(--color-base-bg);
 }
@@ -845,6 +845,11 @@ footer p {
     margin-top: 0;
   }
 
+  .left {
+    margin-left: 40%;
+    margin-top: 2rem;
+  }
+
   nav {
     display: inline-block;
     width: 50%;
@@ -868,11 +873,20 @@ footer p {
 
   .works,
   .my-skills {
+    padding-top: 2rem;
     flex-flow: row nowrap;
+    padding-bottom: var(--header-height);
+  }
+
+  .container-project,
+  .work-info,
+  .work-card {
+    width: 21rem;
+    max-width: 21rem;
   }
 
   .skill {
-    width: 15%;
+    width: 12.5rem;
     height: 19rem;
   }
 
@@ -880,6 +894,30 @@ footer p {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .contacts {
+    padding: 1rem 15% 1rem 0;
+    width: 85%;
+  }
+
+  footer > div > div:last-child {
+    width: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  footer > div > div:first-child {
+    width: auto;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  footer p {
+    width: 60%;
+    padding: 1rem 1rem 1rem 1rem;
+    margin-left: auto;
   }
 }
