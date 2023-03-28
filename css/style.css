@@ -94,6 +94,24 @@ nav {
   display: none;
 }
 
+textarea:focus {
+  border: 3px solid var(--color-title-text);
+  outline: none;
+  box-shadow: 3px 0 30px rgba(163, 163, 163, 0.4);
+  width: 100%;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px var(--color-light-bg) inset;
+  -webkit-text-fill-color: var(--color-pri-text);
+  border: 1px solid var(--color-pri-text);
+}
+
 footer {
   display: flex;
   flex-flow: column nowrap;
@@ -103,6 +121,7 @@ footer {
   padding-top: 3rem;
   background-color: var(--color-light-bg);
   width: 100%;
+  padding-bottom: var(--header-height);
 }
 
 footer div {
@@ -516,13 +535,6 @@ footer p {
   box-shadow: 3px 0 15px rgba(163, 163, 163, 0.4);
 }
 
-textarea:focus {
-  border: 3px solid var(--color-title-text);
-  outline: none;
-  box-shadow: 3px 0 30px rgba(163, 163, 163, 0.4);
-  width: 100%;
-}
-
 .validation-state__form {
   position: absolute;
   right: 10px; /* Position from right to left */
@@ -542,6 +554,7 @@ textarea:focus {
 
 .btn__form:hover {
   box-shadow: 3px 0 30px var(--input-shadows);
+  cursor: pointer;
 }
 
 .work-card:hover .work-info {
