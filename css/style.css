@@ -71,6 +71,7 @@ h2 {
   font-weight: 900;
   font-size: calc(var(--p-size) + 4vw);
   line-height: calc(var(--p-size) + 3vw);
+  white-space: nowrap;
 }
 
 h3 {
@@ -672,7 +673,7 @@ h3 {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: calc(var(--header-height) + 2rem);
+    height: calc(var(--header-height) + 2.3rem);
   }
 
   .logo {
@@ -809,7 +810,6 @@ h3 {
   }
 
   .container-headline {
-    padding-left: 1rem;
     flex-direction: row;
     justify-content: center;
   }
@@ -847,6 +847,10 @@ h3 {
     line-height: var(--p-size);
   }
 
+  .presentation-container a {
+    width: 50%;
+  }
+
   @media screen and (max-height: 281px) {
     .presentation-container p {
       font-size: var(--p-size);
@@ -875,8 +879,10 @@ h3 {
 
   @media screen and (min-width: 1024px) {
     .presentation-container {
-      max-width: 40%;
+      width: 50%;
       max-height: 50%;
+      padding: 5rem;
+      max-width: 670px;
     }
 
     .container-profile {
