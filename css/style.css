@@ -22,6 +22,39 @@ body {
   background-color: var(--color-base-bg);
   box-sizing: border-box;
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 3rem);
+}
+
+html::-webkit-scrollbar {
+  width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--input-shadows);
+  border-radius: 4px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #606060;
+  border-radius: 4px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: #606060;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+html::-webkit-scrollbar-track:hover,
+html::-webkit-scrollbar-track:active {
+  background: var(--input-shadows);
+}
+
+html:hover::-webkit-scrollbar {
+  display: initial;
+}
+
+html::-webkit-scrollbar-thumb:active {
+  background-color: var(--color-light-bg);
 }
 
 h1 {
@@ -600,8 +633,6 @@ footer p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
     width: 100%;
     height: calc(var(--header-height) + 2rem);
   }
@@ -632,14 +663,14 @@ footer p {
 
   .navbar a {
     font-weight: 400;
+    font-size: calc(var(--p-size) + 0.5rem);
   }
 
   .presentation-container {
     display: flex;
     flex-flow: column nowrap;
-    margin-left: auto;
+    margin-top: var(--header-height);
     width: 60%;
-    padding-right: 0.5rem;
   }
 
   .presentation-container p,
@@ -707,7 +738,7 @@ footer p {
     }
 
     .container-profile img {
-      width: 75%;
+      width: 65%;
     }
 
     .container-profile p {
@@ -832,12 +863,12 @@ footer p {
 
   .header-container {
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    top: auto;
-    bottom: 0;
+    top: 0;
     z-index: 999;
     width: 100%;
+    padding-top: 1rem;
     height: var(--header-height);
   }
 
@@ -854,19 +885,23 @@ footer p {
 
   nav {
     display: inline-block;
-    width: 50%;
+    width: 40%;
   }
 
   .navbar {
     position: relative;
     top: 0;
     width: auto;
-    display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     opacity: 1;
+    gap: 0.5rem;
     pointer-events: auto;
+  }
+
+  .navbar a {
+    font-size: calc(var(--p-size) + 0.1rem);
   }
 
   .menu-btn {
