@@ -455,6 +455,7 @@ h3 {
   max-height: 23.7rem;
   min-height: 15rem;
   margin: 1rem 0 1rem 0;
+  transition: transform 1s ease-in-out;
 }
 
 .container-project {
@@ -648,6 +649,10 @@ h3 {
 .work-card:hover .work-info {
   opacity: 0;
   pointer-events: none;
+}
+
+.work-card:hover {
+  transform: scale(1.07, 1.07);
 }
 
 .skill:hover {
