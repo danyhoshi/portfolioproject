@@ -406,6 +406,7 @@ h3 {
   background-color: var(--color-light-bg);
   border-radius: 6px;
   margin-top: 1rem;
+  transition: transform 0.5s ease-in-out;
 }
 
 .skill div {
@@ -649,6 +650,10 @@ h3 {
   pointer-events: none;
 }
 
+.skill:hover {
+  transform: translateY(-10%);
+}
+
 .title-contacts {
   font-family: var(--font-family-logo);
   font-weight: 400;
@@ -780,6 +785,10 @@ h3 {
   .contacts li {
     width: 50%;
     padding-left: 0;
+  }
+
+  .skill:hover {
+    transform: translateY(-5%);
   }
 
   @media only screen and (min-height: 1008px) {
