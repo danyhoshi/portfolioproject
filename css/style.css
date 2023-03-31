@@ -24,6 +24,7 @@ body {
   box-sizing: border-box;
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-height) + 3rem);
+  overflow-x: hidden;
 }
 
 html::-webkit-scrollbar {
@@ -1112,4 +1113,40 @@ h3 {
     font-size: calc(var(--p-size-small) + 1vw);
     width: 70%;
   }
+}
+
+@keyframes myAnimationL {
+  from {
+    opacity: 0;
+    transform: translateX(-25%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes myAnimationR {
+  from {
+    opacity: 0;
+    transform: translateX(25%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.animationL {
+  animation-name: myAnimationL;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+.animationR {
+  animation-name: myAnimationR;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
 }
