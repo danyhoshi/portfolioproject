@@ -5,6 +5,7 @@
   --color-title-text: #ff8303;
   --color-base-bg-transp: #1f1e1bf7;
   --input-shadows: rgba(163, 163, 163, 1);
+  --color-title-transp: #ff830383;
   --font-family: 'Inconsolata', monospace;
   --font-family-logo: 'Anton', sans-serif;
   --font-family-logo-sec: 'Inter', sans-serif;
@@ -262,6 +263,7 @@ footer p {
   font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
+  transition: color 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .container {
@@ -279,6 +281,16 @@ footer p {
   min-height: 100vh;
   width: 100%;
   padding: 4rem 0 0 0;
+}
+
+.gradient-hover-effect {
+  background: radial-gradient(circle, var(--color-base-bg), var(--color-base-bg-light), transparent);
+  transition: background-color 1s ease-in-out;
+}
+
+.gradient-hover-effect:hover,
+.gradient-hover-effect:focus {
+  background-color: var(--color-title-transp);
 }
 
 .container-profile {
@@ -656,14 +668,17 @@ h3 {
 
 .navbar a:hover {
   color: var(--color-title-text);
+  opacity: 0.7;
 }
 
 .navbar a:focus {
   color: var(--color-title-text);
+  opacity: 0.7;
 }
 
 .navbar a:active {
   color: var(--color-title-text);
+  opacity: 0.7;
 }
 
 /* Tablets styles */
@@ -948,7 +963,8 @@ h3 {
     z-index: 999;
     width: 100%;
     padding-top: 1rem;
-    height: var(--header-height);
+    padding-bottom: 1rem;
+    height: calc(var(--header-height) + 0.3rem);
   }
 
   .logo {
