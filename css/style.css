@@ -798,7 +798,7 @@ h3 {
 @media screen and (orientation: landscape) {
   .presentation-container {
     width: 50%;
-    margin: 0;
+    margin: 0 1rem;
     gap: 0;
   }
 
@@ -851,25 +851,27 @@ h3 {
     width: 50%;
   }
 
-  @media screen and (max-height: 281px) {
-    .presentation-container p {
-      font-size: var(--p-size);
-      margin: 0.5rem 0;
-    }
+  @media screen and (max-height: 360px) {
+    @media screen and (max-height: 281px) {
+      .presentation-container p {
+        font-size: var(--p-size);
+        margin: 0.5rem 0;
+      }
 
-    h2 {
-      font-size: calc(var(--p-size) + 1vw);
-      margin: 0.5rem 0;
-    }
+      h2 {
+        font-size: calc(var(--p-size) + 1vw);
+        margin: 0.5rem 0;
+      }
 
-    h3 {
-      font-size: calc(var(--p-size) + 0.5vw);
-      line-height: var(--p-size);
-      margin: 0.5rem 0;
-    }
+      h3 {
+        font-size: calc(var(--p-size) + 0.5vw);
+        line-height: var(--p-size);
+        margin: 0.5rem 0;
+      }
 
-    .container-profile img {
-      width: 53%;
+      .container-profile img {
+        width: 53%;
+      }
     }
 
     .btn__cv {
@@ -903,6 +905,29 @@ h3 {
 
     .container-profile img {
       width: 100%;
+    }
+
+    .works,
+    .my-skills {
+      padding-top: 2rem;
+      flex-flow: row nowrap;
+      padding-bottom: var(--header-height);
+    }
+
+    .container-project,
+    .work-info,
+    .work-card {
+      width: 19rem;
+      max-width: 19rem;
+    }
+
+    .presentation-container a {
+      width: 50%;
+    }
+
+    .skill {
+      width: 11rem;
+      height: 19rem;
     }
   }
 }
@@ -974,6 +999,10 @@ h3 {
   .work-card {
     width: 21rem;
     max-width: 21rem;
+  }
+
+  .presentation-container {
+    margin: 0;
   }
 
   .presentation-container a {
