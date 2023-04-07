@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="/img/profile.png">
+    <title>Daniela's Portfolio</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header-container">
+            <div class="logo">
+                <a href="index.html"><span class="logo-symbol">&lt;/</span><span class="orange">D</span>aniela<span class="logo-symbol">&gt;</span></a>
+            </div>
+            
+            <button type="button" class="menu-btn">
+               <div class="container-svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M5.25 37.25V32.7h37.5v4.55Zm0-10.95v-4.55h37.5v4.55Zm0-11v-4.6h37.5v4.6Z"/></svg>
+               </div>
+                <div class="container-svg none">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M12.45 38.7 9.3 35.55 20.85 24 9.3 12.5l3.15-3.2L24 20.8 35.55 9.3l3.15 3.2L27.2 24l11.5 11.55-3.15 3.15L24 27.2Z"/></svg>
+                </div>
+            </button>
+         <nav>
+            <ul class="navbar">
+                <li><a href="#aboutme">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Pet-Projects</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+         </nav>   
+            
+        </header>
+        <main>
+            <section class="container-headline">
+                <div class="presentation-container animationL">
+                    <h2>Daniela González</h2>
+                    <h3>Frontend Developer</h3>
+                    <p> I am a Computer Scientist and a Frontend Developer. I like to learn new things and practice them!</p>
+                    <a href="./assets/cv.pdf" target="blank" rel="noopener"><button class="btn__cv gradient-hover-effect" type="button">
+                        Get Resume
+                    </button></a>
+                </div>
+                <div class="container-profile animationR">
+                    <p>let button_menu = document.querySelector(".header_button"); <br> 
+                        let float_menu = document.querySelector(".header_menu--float"); <br><br> 
+                        let line_top = document.querySelector(".header_button_line--top"); <br> 
+                        let line_under = document.querySelector(".header_button_line--bottom"); <br><br> 
+                        button_menu.isSelected = false; <br><br>
+                        &nbsp;function addEffectWriting(element, time) { let element_array = element.innerText.split(""); <br><br> 
+                        &nbsp; &nbsp;element.count = 0; <br> 
+                        &nbsp; &nbsp;element.innerText = ""; <br><br> 
+                        &nbsp; function writeSymbols() { element.innerText += element_array[element.count]; <br> 
+                            &nbsp;element.count++; <br> 
+                            &nbsp;if (element.count &lt;= element_array.length) { setTimeout(() => { writeSymbols(); <br> <br>
+                                &nbsp; }, time); } else if (element.count >= element_array.length) { element.count = 0; <br> 
+                                    &nbsp; element.innerText = ""; <br> <br>
+                                    &nbsp;writeSymbols(); <br> } } writeSymbols(); <br>
+                            } ...</p>
+                        <div><img src="./img/profile.png" alt="profile"></div>
+                </div>
+            </section>
+            <section id="aboutme" class="about-me">
+                <div>
+                    <img src="./img/Logo.png" alt="logo">
+                </div>
+                <p>A few years ago, I became interested in developing websites and interfaces. Since then, I have been steadily improving my skills. Now I am developing websites and web applications to order or for myself.</p>
+            </section>
+            <h3 id="skills" class="title-section">My Skills</h3>
+            <section class="my-skills">
+                <div class="skill">
+                   <div><img src="/img/icon-html.png" alt="icon-html"></div>
+                   <div><img src="/img/icon-html-hover.png" alt="icon-html-hover"></div>
+                   HTML5
+                </div>
+                <div class="skill">
+                    <div><img src="/img/icon-css.png" alt="icon-css"></div><div><img src="/img/icon-css-hover.png" alt="icon-css-hover"></div> CSS3
+                </div>
+                 <div class="skill">
+                    <div><img src="/img/icon-js.png" alt="icon-js"></div><div><img src="/img/icon-js-hover.png" alt="icon-js-hover"></div> JavaScript
+                 </div>
+                 <div class="skill">
+                    <div><img src="/img/icon-scss.png" alt="icon-scss"></div><div><img src="/img/icon-scss-hover.png" alt="icon-scss-hover."></div> SCSS3
+                 </div>
+                 <div class="skill">
+                    <div><img src="/img/icon-git.png" alt="icon-git"></div><div><img src="/img/icon-git-hover.png" alt="icon-git-hover"></div> Git
+                 </div>
+            </section>
+            <h3 class="title-section">My Works</h3>
+            <section id="projects" class="works">          
+                <div class="work-card">
+                    <div class="container-project"><img src="./img/project.png" alt="project"></div>
+                    <div class="work-info">
+                        <h4>News Blog</h4>
+                        <h5>HTML, CSS, JS</h5>
+                        <div class="line"></div>
+                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt voluptate expedita impedit itaque mollitia, qui hic cupiditate magni quaerat.</p>
+                        <button type="button">See more &rarr;</button>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <div class="container-project"><img src="./img/project.png" alt="project"></div>
+                    <div class="work-info">
+                        <h4>News Blog</h4>
+                        <h5>HTML, CSS, JS</h5>
+                        <div class="line"></div>
+                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt voluptate expedita impedit itaque mollitia, qui hic cupiditate magni quaerat.</p>
+                        <button type="button">See more &rarr;</button>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <div class="container-project"><img src="./img/project.png" alt="project"></div>
+                    <div class="work-info">
+                        <h4>News Blog</h4>
+                        <h5>HTML, CSS, JS</h5>
+                        <div class="line"></div>
+                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt voluptate expedita impedit itaque mollitia, qui hic cupiditate magni quaerat.</p>
+                        <button type="button">See more &rarr;</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <section class="contact">
+                <h3 id="contacts" class="title-section">Get in touch</h3>
+                <form action="https://formspree.io/f/xwkjnvdr" method="POST" class="form">
+                    <div class="group__form">
+                        <label for="name" class="label__form">Name</label>
+                        <div class="group-input__form">
+                            <input type="text" class="input__form" name="name" id="name" placeholder="John" maxlength="30" required>
+                            <span class="validation-state__form material-symbols-outlined">cancel</span>
+                        </div>
+                        <p class="input-error__form">The name must only have letters and spaces.</p>
+                    </div>
+                    
+                    <div class="group__form">
+                        <label for="lastname" class="label__form">Last Name</label>
+                        <div class="group-input__form">
+                            <input type="text" class="input__form" name="lastname" id="lastname" placeholder="Doe" maxlength="30" required>
+                            <span class="validation-state__form material-symbols-outlined">cancel</span>
+                        </div>
+                        <p class="input-error__form">The name must only have letters and spaces.</p>
+                    </div>
+
+                <div class="group__form">
+                        <label for="email" class="label__form">Email</label>
+                        <div class="group-input__form">
+                            <input type="email" class="input__form" name="email" id="email" placeholder="johndoe@email.com" required>
+                            <span class="validation-state__form material-symbols-outlined">cancel</span>
+                        </div>
+                        <p class="input-error__form">Please insert a valid email address</p>
+                    </div>
+        
+                    <div class="group__form">
+                        <label for="message" class="label__form" required>Message</label>
+                        <div class="group-input__form">
+                            <textarea maxlength="500" rows="10" cols="60" name="message" placeholder="Let's talk about projects..."></textarea>
+                        </div>
+                        <p class="input-error__form">Please insert a message</p>
+                    </div>
+        
+                    <div class="message__form">
+                        <p><span class="material-symbols-outlined">warning</span><b>Error: </b>Please fill in the form correctly</p>
+                    </div>
+        
+                    <div class="group__form-btn-form">
+                        <button type="submit" class="btn__form gradient-hover-effect">Submit</button>
+                        <p class="submit-success__form">The form was sent successfully</p>
+                    </div> 
+                </form>
+            </section>
+            <div>
+                <div>
+                    <div class="logo left">
+                        <a href="index.html"><span class="logo-symbol">&lt;/</span><span class="orange">D</span>aniela<span class="logo-symbol">&gt;</span></a>
+                    </div>
+                    <p>If you liked my work and you need me, I'm ready to talk to you.</p>
+                </div>
+             
+                <div>
+                    <h3 class="title-contacts">Contacts</h3>
+                    <ul class="contacts">
+                        <li>
+                            <a href="mailto:1989.daniela@gmail.com" target="blank" rel="noopener"><svg width="28" height="27" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24.6667 26.8333H3.33332C2.62608 26.8333 1.9478 26.5523 1.44771 26.0523C0.947609 25.5522 0.666656 24.8738 0.666656 24.1666V9.56528C0.68882 9.12459 0.818359 8.69594 1.04401 8.31667C1.26965 7.93739 1.58455 7.61907 1.96132 7.38928L12.628 0.989307C13.0423 0.740895 13.5163 0.60968 13.9993 0.60968C14.4824 0.60968 14.9563 0.740895 15.3707 0.989307L26.0373 7.38928C26.8386 7.87331 27.3307 8.73998 27.3333 9.67598V24.1666C27.3333 24.8738 27.0524 25.5522 26.5523 26.0523C26.0522 26.5523 25.3739 26.8333 24.6667 26.8333ZM3.33332 10.6573V24.1666H24.6667V10.6573L14 17.7679L3.33332 10.6573ZM14 3.27597L5.08799 8.62265L14 14.564L22.9107 8.62265L14 3.27597Z" fill="#F0E3CA"/>
+                            </svg></a>
+                            <a href="mailto:1989.daniela@gmail.com" target="blank" rel="noopener">1989.daniela@gmail.com</a>
+                        </li>
+                            
+                        <li>
+                            <a href="https://twitter.com/Dany_hoshi" target="blank" rel="noopener"><svg width="32" height="33" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="M23.4 5c-.1-.2-.4-.2-.6-.1-.2.1-.5.2-.7.3.3-.4.6-.9.8-1.5.1-.2 0-.4-.2-.5s-.4-.1-.5 0c-.8.5-1.6.8-2.5 1-.9-.9-2.2-1.4-3.5-1.4-2.8 0-5 2.2-5 4.9v.5C8 7.8 5 6.2 2.9 3.7c-.1-.1-.3-.2-.4-.2-.2 0-.3.1-.4.2-.4.8-.7 1.7-.7 2.5 0 1 .3 2 .9 2.9 0 0-.1-.1-.2-.1-.1-.1-.3 0-.5 0-.1.1-.2.3-.2.4 0 1.6.8 3.1 2 4-.1 0-.2.1-.3.2-.1.1-.2.3-.1.4.5 1.6 1.8 2.8 3.4 3.2-1.6.9-3.5 1.3-5.4 1.1-.2 0-.4.1-.5.3-.1.2 0 .4.2.6 2.2 1.4 4.6 2.1 7.2 2.1 8.4 0 13.3-6.7 13.3-13.1v-.3c.8-.6 1.6-1.4 2.2-2.3.1-.2.1-.5 0-.6z" fill="#ffffff" class="fill-000000"></path></svg></a>
+                            <a href="https://twitter.com/Dany_hoshi" target="blank" rel="noopener">@dany_hoshi</a>
+                        </li>
+        
+                        <li>
+                            <a href="https://github.com/danyhoshi" target="blank" rel="noopener"><svg width="32" height="33" viewBox="0 0 32 33" fill="white" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 0.896019C7.161 0.896019 0 8.06302 0 16.896C0 23.9691 4.584 29.964 10.937 32.079C11.74 32.23 12.03 31.735 12.03 31.307C12.03 30.927 12.021 29.922 12.015 28.588C7.562 29.552 6.624 26.437 6.624 26.437C5.895 24.5931 4.843 24.098 4.843 24.098C3.395 23.109 4.958 23.13 4.958 23.13C6.562 23.239 7.406 24.775 7.406 24.775C8.83299 27.223 11.15 26.515 12.067 26.103C12.207 25.072 12.624 24.363 13.078 23.968C9.52602 23.567 5.791 22.192 5.791 16.061C5.791 14.31 6.411 12.884 7.436 11.764C7.259 11.363 6.717 9.73301 7.577 7.52902C7.577 7.52902 8.91604 7.10202 11.977 9.17004C13.2809 8.81538 14.6258 8.63351 15.977 8.62901C17.337 8.638 18.696 8.81599 19.977 9.17004C23.02 7.10202 24.358 7.52902 24.358 7.52902C25.217 9.73301 24.675 11.362 24.519 11.764C25.534 12.884 26.154 14.311 26.154 16.061C26.154 22.206 22.414 23.5611 18.858 23.952C19.414 24.431 19.935 25.416 19.935 26.911C19.935 29.051 19.915 30.775 19.915 31.296C19.915 31.712 20.195 32.212 21.019 32.051C27.419 29.958 31.998 23.958 31.998 16.895C31.998 8.06202 24.837 0.89502 15.998 0.89502L16 0.896019Z" fill="#F0E3CA"/>
+                            </svg></a>
+                            <a href="https://github.com/danyhoshi" target="blank" rel="noopener">@danyhoshi</a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.linkedin.com/in/daniela-gonz%C3%A1lez-ba16a556/" target="blank" rel="noopener"><?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg fill="white" enable-background="new 0 0 37 38" width="37" height="38"  id="linkedin" version="1.1" viewBox="0 0 144.083 144" width="144.083px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M72.04,14.166c-31.939,0-57.833,25.894-57.833,57.833c0,31.94,25.893,57.835,57.833,57.835  c31.941,0,57.836-25.895,57.836-57.835C129.875,40.06,103.981,14.166,72.04,14.166z M48.042,40.25c3.934,0,7.125,2.91,7.125,6.5  s-3.191,6.5-7.125,6.5c-3.936,0-7.125-2.91-7.125-6.5S44.106,40.25,48.042,40.25z M55.221,95.845H41.143V59.11h14.078V95.845z   M103.059,95.845H88.913v-20.2c0-2.306-0.428-3.938-1.281-4.896c-0.854-0.956-2.053-1.436-3.596-1.436  c-1.707,0-3.092,0.646-4.152,1.938c-1.061,1.292-1.59,3.609-1.59,6.953v17.641H64.215V59.11h13.109v5.983  c1.959-2.443,3.943-4.19,5.949-5.24c2.006-1.049,4.449-1.573,7.332-1.573c3.898,0,6.947,1.158,9.15,3.476  c2.201,2.317,3.303,5.897,3.303,10.74V95.845z"/></svg></a>
+                            <a href="https://www.linkedin.com/in/daniela-gonz%C3%A1lez-ba16a556/" target="blank" rel="noopener">Daniela González</a>
+                        </li>
+                    </ul>
+                </div> 
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
