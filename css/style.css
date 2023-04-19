@@ -691,7 +691,7 @@ h3 {
   opacity: 0.7;
 }
 
-.navbar a:active {
+a:active {
   color: var(--color-title-text);
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   opacity: 0.7;
