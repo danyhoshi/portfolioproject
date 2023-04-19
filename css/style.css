@@ -681,6 +681,12 @@ h3 {
   display: none;
 }
 
+a:active {
+  color: var(--color-title-text);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  opacity: 0.7;
+}
+
 .navbar a:hover {
   color: var(--color-title-text);
   opacity: 0.7;
@@ -688,12 +694,6 @@ h3 {
 
 .navbar a:focus {
   color: var(--color-title-text);
-  opacity: 0.7;
-}
-
-a:active {
-  color: var(--color-title-text);
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   opacity: 0.7;
 }
 
