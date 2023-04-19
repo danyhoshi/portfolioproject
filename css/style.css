@@ -376,6 +376,10 @@ h3 {
   text-align: left;
 }
 
+.about-me div {
+  width: 4.5rem;
+}
+
 .title-section {
   color: var(--color-title-text);
   text-align: center;
@@ -689,6 +693,7 @@ h3 {
 
 .navbar a:active {
   color: var(--color-title-text);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   opacity: 0.7;
 }
 
