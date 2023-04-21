@@ -237,7 +237,7 @@ footer p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   opacity: 0;
   left: 0;
   padding: 1rem 0;
