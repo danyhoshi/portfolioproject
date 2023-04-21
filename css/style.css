@@ -4,6 +4,7 @@
   --color-pri-text: #f0e3ca;
   --color-title-text: #ff8303;
   --color-base-bg-transp: #1f1e1bf7;
+  --color-navbar-active-bg: #171717cc;
   --input-shadows: rgba(163, 163, 163, 1);
   --color-title-transp: #ff830383;
   --font-family: 'Inconsolata', monospace;
@@ -234,8 +235,12 @@ footer p {
   position: fixed;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   opacity: 0;
   left: 0;
+  padding: 1rem 0;
   top: var(--header-height);
   width: 100%;
   pointer-events: none;
@@ -251,7 +256,11 @@ footer p {
 }
 
 .navbar-active {
+  background-color: var(--color-navbar-active-bg);
   opacity: 1;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   pointer-events: auto;
 }
 
@@ -685,6 +694,11 @@ a:active {
   color: var(--color-title-text);
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   opacity: 0.7;
+}
+
+.menu-btn:active {
+  transform: rotate(360deg);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .navbar a:hover {
