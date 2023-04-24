@@ -33,8 +33,7 @@ const workCard = [{
   desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt voluptate expedita impedit itaque mollitia, qui hic cupiditate magni quaerat.',
   btn: 'See more →',
   url: 'https://github.com/danyhoshi/portfolioproject',
-},
-];
+}];
 
 workCard.forEach((el) => {
   template.querySelector('.container-project img').setAttribute('src', el.src);

@@ -427,6 +427,12 @@ h3 {
   width: 2.5rem;
 }
 
+.skill svg {
+  width: 100%;
+  fill: var(--color-pri-text);
+  transition: fill 0.7s ease-in-out;
+}
+
 .work-info div {
   display: flex;
   width: 100%;
@@ -452,10 +458,6 @@ h3 {
 
 .contacts a {
   color: var(--color-title-text);
-}
-
-.skill div:last-child {
-  display: none;
 }
 
 .work-card {
@@ -541,24 +543,12 @@ h3 {
 }
 
 .container-project-m {
-  /* max-width: 23.7rem;
-  min-width: 15em;
-  max-height: 23.7rem;
-  min-height: 15rem; */
-
-  /* width: 0%; */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50%;
   flex-basis: 50%;
 }
-
-
-/* .container-project-m img {
-
-  width: 70%;
-} */
 
 .modal div:last-child {
   flex-basis: 50%;
@@ -764,6 +754,26 @@ h3 {
   color: var(--color-title-text);
 }
 
+.html5:hover svg {
+  fill: #fc490b;
+}
+
+.css:hover svg {
+  fill: #2196f4;
+}
+
+.js:hover svg {
+  fill: #ffdf00;
+}
+
+.scss:hover svg {
+  fill: #ca669b;
+}
+
+.git:hover svg {
+  fill: #f25234;
+}
+
 .btn__form:hover {
   /* box-shadow: 3px 0 20px var(--input-shadows); */
   cursor: pointer;
@@ -794,14 +804,6 @@ h3 {
   color: var(--color-title-text);
   margin-bottom: 0;
   margin-top: 5vh;
-}
-
-.skill:hover div:last-child {
-  display: block;
-}
-
-.skill:hover div:first-child {
-  display: none;
 }
 
 a:active {
@@ -907,11 +909,6 @@ a:active {
   .skill div {
     width: 8rem;
     height: 5rem;
-  }
-
-  .skill img {
-    width: 40rem;
-    margin-bottom: 1rem;
   }
 
   .contacts {
