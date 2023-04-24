@@ -472,6 +472,107 @@ h3 {
   transition: transform 1s ease-in-out;
 }
 
+.work-card button {
+  position: absolute;
+  bottom: 1rem;
+  left: 23%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  height: 56px;
+  color: var(--color-pri-text);
+  font: 600 var(--font-family) calc(var(--p-size) + 1vw)/var(--p-size);
+  text-align: center;
+  background-color: #32312e;
+  border-radius: 6px;
+  border-color: transparent;
+  padding: 1rem;
+  margin: 1rem;
+  z-index: 100;
+}
+
+.modal-container {
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  pointer-events: none;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-base-bg);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 1.7rem;
+  width: 90%;
+  max-width: 600px;
+}
+
+.modal-container svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  fill: var(--color-title-text);
+  width: 3rem;
+  height: 3rem;
+  z-index: inherit;
+}
+
+.modal p {
+  padding: 1rem 0;
+  margin: 0;
+  text-align: center;
+}
+
+.container-project-m {
+  /* max-width: 23.7rem;
+  min-width: 15em;
+  max-height: 23.7rem;
+  min-height: 15rem; */
+
+  /* width: 0%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  flex-basis: 50%;
+}
+
+
+/* .container-project-m img {
+
+  width: 70%;
+} */
+
+.modal div:last-child {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .container-project {
   position: relative;
   top: 0;
@@ -500,7 +601,7 @@ h3 {
   box-sizing: border-box;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   z-index: 99;
   pointer-events: auto;
@@ -524,7 +625,6 @@ h3 {
   margin: 1rem 1rem;
 }
 
-.work-info button,
 .btn__form {
   display: flex;
   flex-flow: column nowrap;
@@ -567,6 +667,14 @@ h3 {
   border-top: 1px solid var(--color-title-text);
   height: 1px;
   max-width: 70%;
+  padding: 0;
+  text-align: center;
+}
+
+.line2 {
+  border-top: 1px solid var(--color-title-text);
+  height: 1px;
+  width: 90%;
   padding: 0;
   text-align: center;
 }
@@ -648,6 +756,12 @@ h3 {
 
 .submit-success__form {
   display: none;
+}
+
+.modal a {
+  font-size: 1.1rem;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+  color: var(--color-title-text);
 }
 
 .btn__form:hover {
@@ -845,6 +959,21 @@ a:active {
 
 /* Landscape styles */
 @media screen and (orientation: landscape) {
+  .modal {
+    flex-direction: row;
+    width: 90%;
+    max-width: 1024px;
+    max-height: 70%;
+  }
+
+  .modal img {
+    width: 70%;
+  }
+
+  .modal p {
+    flex-basis: 50%;
+  }
+
   .presentation-container {
     width: 50%;
     margin: 0 1rem;
@@ -1040,7 +1169,7 @@ a:active {
   .works,
   .my-skills {
     padding-top: 2rem;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     padding-bottom: var(--header-height);
   }
 
