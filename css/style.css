@@ -852,6 +852,7 @@ a:active {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    background-color: var(--color-base-bg);
     opacity: 1;
     left: 0;
     top: var(--header-height);
