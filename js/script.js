@@ -11,7 +11,6 @@ const workCard = [{
   title: 'News Blog',
   subTitle: 'HTML, CSS, JS',
   desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt voluptate expedita impedit itaque mollitia, qui hic cupiditate magni quaerat.',
-  btn: 'See more →',
   url: 'https://github.com/danyhoshi/portfolioproject',
 },
 {
@@ -21,7 +20,6 @@ const workCard = [{
   title: 'News Blog',
   subTitle: 'HTML, CSS, JS',
   desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt voluptate expedita impedit itaque mollitia, qui hic cupiditate magni quaerat.',
-  btn: 'See more →',
   url: 'https://github.com/danyhoshi/portfolioproject',
 },
 {
@@ -31,7 +29,6 @@ const workCard = [{
   title: 'News Blog',
   subTitle: 'HTML, CSS, JS',
   desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt voluptate expedita impedit itaque mollitia, qui hic cupiditate magni quaerat.',
-  btn: 'See more →',
   url: 'https://github.com/danyhoshi/portfolioproject',
 }];
 
@@ -50,9 +47,6 @@ workCard.forEach((el) => {
   template.querySelector('.modal-container h5').textContent = el.subTitle;
   template.querySelector('.work-card .text').textContent = el.desc;
   template.querySelector('.modal-container p').textContent = el.desc;
-  template.querySelector('.work-card button').textContent = el.btn;
-  template.querySelector('.work-card button').setAttribute('aria-label', el.btn);
-  template.querySelector('.work-card button').setAttribute('type', 'button');
   template.querySelector('.work-card button').setAttribute('id', el.id);
   template.querySelector('.modal-container a').textContent = 'Take a look';
   template.querySelector('.modal-container a').setAttribute('href', el.url);
