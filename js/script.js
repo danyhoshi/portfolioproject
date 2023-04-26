@@ -3,6 +3,42 @@ const menuBtn = document.querySelector('.menu-btn');
 const works = document.querySelector('.works');
 const template = document.querySelector('template').content;
 const fragment = document.createDocumentFragment();
+const form = document.querySelector('form');
+const inputs = document.querySelectorAll('form [required]');
+
+inputs.forEach((input) => {
+  const p = document.createElement('p');
+  const span = document.createElement('span');
+  span.textContent = 'cancel';
+  span.classList.add('validation-state__form');
+  span.classList.add('material-symbols-outlined');
+  span.id = `${input.name}s`;
+  p.id = `${input.name}p`;
+  p.textContent = input.title;
+  p.classList.add('input-error__form');
+  input.insertAdjacentElement('afterend', span);
+  input.nextElementSibling.insertAdjacentElement('afterend', p);
+});
+
+document.addEventListener('keyup', (e) => {
+  if (e.target.matches('form [required]')) {
+    const input = e.target;
+    const pattern = input.pattern || input.dataset.pattern;
+
+    const regex = new RegExp(pattern);
+    if (!regex.exec(input.value)) {
+      input.parentElement.parentElement.classList.add('group__form-incorrect');
+      document.getElementById(`${input.name}p`).classList.add('input-error__form-active');
+      document.getElementById(`${input.name}s`).textContent = 'cancel';
+      input.parentElement.parentElement.classList.remove('group__form-correct');
+    } else {
+      input.parentElement.parentElement.classList.remove('group__form-incorrect');
+      document.getElementById(`${input.name}p`).classList.remove('input-error__form-active');
+      input.parentElement.parentElement.classList.add('group__form-correct');
+      document.getElementById(`${input.name}s`).textContent = 'check_circle';
+    }
+  }
+});
 
 const workCard = [{
   id: 'proj-1',
@@ -99,4 +135,20 @@ document.addEventListener('click', (e) => {
 
   clickedT.parentElement.parentElement.parentElement.classList.remove('modal-active');
   return true;
+});
+
+form.addEventListener('submit', () => {
+  const message = document.querySelector('.group__form-btn-form p');
+  const loader = document.querySelector('.group__form-btn-form div');
+  message.classList.add('input-error__form-active');
+  message.classList.remove('submit-success__form');
+  loader.classList.add('input-error__form-active');
+  loader.classList.remove('submit-success__form');
+  setTimeout(() => {
+    message.classList.remove('input-error__form-active');
+  }, 3000);
+  document.querySelectorAll('.group__form-correct').forEach((icon) => {
+    icon.classList.remove('group__form-correct');
+  });
+  document.querySelector('.message__form').classList.remove('message__form-active');
 });

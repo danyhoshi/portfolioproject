@@ -134,8 +134,12 @@ nav {
 textarea:focus {
   border: 3px solid var(--color-title-text);
   outline: none;
-  box-shadow: 3px 0 30px rgba(163, 163, 163, 0.4);
+  box-shadow: 3px 0 7px rgba(163, 163, 163, 0.4);
   width: 100%;
+}
+
+.group__form-incorrect textarea {
+  border: 3px solid #bb2929;
 }
 
 input:-webkit-autofill,
@@ -550,6 +554,11 @@ h3 {
   flex-basis: 50%;
 }
 
+.group__form-btn-form div {
+  width: 100%;
+  text-align: center;
+}
+
 .modal div:last-child {
   flex-basis: 50%;
   display: flex;
@@ -697,6 +706,13 @@ h3 {
   width: 80%;
 }
 
+.group__form-btn-form p {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
 .label__form {
   display: block;
   font-weight: 700;
@@ -725,17 +741,22 @@ h3 {
   display: none;
 }
 
+.input-error__form-active {
+  display: block;
+}
+
 .input__form:focus {
   border: 3px solid var(--color-title-text);
   outline: none;
-  box-shadow: 3px 0 15px rgba(163, 163, 163, 0.4);
+  box-shadow: 3px 0 7px rgba(163, 163, 163, 0.4);
 }
 
 .validation-state__form {
   position: absolute;
   right: 10px; /* Position from right to left */
-  bottom: 15px;
-  z-index: 1000;
+  bottom: 10px;
+  top: 10px;
+  z-index: 99;
   font-size: 1em;
   opacity: 0; /* It doesn't show until I want to */
 }
@@ -772,6 +793,43 @@ h3 {
 
 .git:hover svg {
   fill: #f25234;
+}
+
+/* Validation styles */
+.group__form-correct .validation-state__form {
+  color: var(--color-title-text);
+  opacity: 1;
+}
+
+.group__form-incorrect .validation-state__form {
+  color: #bb2929;
+  opacity: 1;
+}
+
+.group__form-incorrect label {
+  color: #bb2929;
+}
+
+.group__form-incorrect p {
+  color: #bb2929;
+}
+
+label.group__form-incorrect {
+  color: #bb2929;
+}
+
+.group__form-incorrect .input__form {
+  border: 3px solid #bb2929;
+}
+
+.group__form-incorrect .label__form {
+  color: #bb2929;
+}
+
+.group__form p {
+  width: 100%;
+  margin: 0.2rem;
+  padding: 0;
 }
 
 .btn__form:hover {
@@ -1221,6 +1279,12 @@ a:active {
     width: 60%;
     padding: 1rem 1rem 1rem 1rem;
     margin-left: auto;
+  }
+
+  .group__form p {
+    width: 100%;
+    margin: 0.2rem;
+    padding: 0;
   }
 
   footer > div > div:last-child {
