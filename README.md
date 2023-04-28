@@ -2,9 +2,9 @@
 
 Set up the project, the goal here is to master all of the tools and best practices of Linter, Gitflow and use HTML, CSS and JavaScript to create my portfolio based on the design [Figma](https://www.figma.com/file/37I8ZWolwztoarMD9FXlbI/My-Portfolio-(Community)?node-id=3-12&t=8W33z4xTeJtBANZm-0)
 
-![Portfolio-design](./img/screen1.png)
-![Portfolio-design](./img/screen2.png)
-![Portfolio-design](./img/screen3.png)
+![Portfolio-design](./img/headline.webp)
+![Portfolio-design](./img/screen2.webp)
+![Portfolio-design](./img/screen3.webp)
 ## Built With
 
 - HTML

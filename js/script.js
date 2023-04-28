@@ -36,6 +36,28 @@ document.addEventListener('keyup', (e) => {
       document.getElementById(`${input.name}p`).classList.remove('input-error__form-active');
       input.parentElement.parentElement.classList.add('group__form-correct');
       document.getElementById(`${input.name}s`).textContent = 'check_circle';
+      localStorage.setItem(input.name, input.value);
+    }
+  }
+});
+
+document.addEventListener('change', (e) => {
+  if (e.target.matches('form [required]')) {
+    const input = e.target;
+    const pattern = input.pattern || input.dataset.pattern;
+
+    const regex = new RegExp(pattern);
+    if (!regex.exec(input.value)) {
+      input.parentElement.parentElement.classList.add('group__form-incorrect');
+      document.getElementById(`${input.name}p`).classList.add('input-error__form-active');
+      document.getElementById(`${input.name}s`).textContent = 'cancel';
+      input.parentElement.parentElement.classList.remove('group__form-correct');
+    } else {
+      input.parentElement.parentElement.classList.remove('group__form-incorrect');
+      document.getElementById(`${input.name}p`).classList.remove('input-error__form-active');
+      input.parentElement.parentElement.classList.add('group__form-correct');
+      document.getElementById(`${input.name}s`).textContent = 'check_circle';
+      localStorage.setItem(input.name, input.value);
     }
   }
 });
@@ -109,6 +131,16 @@ document.addEventListener('click', (e) => {
   return true;
 });
 
+document.addEventListener('click',
+  (e) => {
+    const click = e.target;
+    if (navbar.className === 'navbar navbar-active' && click !== navbar && click.tagName !== 'svg' && click.tagName !== 'BUTTON' && click.tagName !== 'path') {
+      navbar.classList.remove('navbar-active');
+      menuBtn.firstElementChild.classList.remove('none');
+      menuBtn.lastElementChild.classList.add('none');
+    }
+  }, false);
+
 document.addEventListener('click', (e) => {
   const clicked = e.target.matches('.works button');
   const clickedT = e.target;
@@ -151,4 +183,13 @@ form.addEventListener('submit', () => {
     icon.classList.remove('group__form-correct');
   });
   document.querySelector('.message__form').classList.remove('message__form-active');
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('name') || localStorage.getItem('lastname') || localStorage.getItem('email') || localStorage.getItem('message')) {
+    document.querySelector('[name=\'name\']').value = localStorage.getItem('name');
+    document.querySelector('[name=\'lastname\']').value = localStorage.getItem('lastname');
+    document.querySelector('[name=\'email\']').value = localStorage.getItem('email');
+    document.querySelector('[name=\'message\']').value = localStorage.getItem('message');
+  }
 });
