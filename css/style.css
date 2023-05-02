@@ -4,6 +4,7 @@
   --color-pri-text: #f0e3ca;
   --color-title-text: #ff8303;
   --color-base-bg-transp: #1f1e1bf7;
+  --color-navbar-active-bg: #171717cc;
   --input-shadows: rgba(163, 163, 163, 1);
   --color-title-transp: #ff830383;
   --font-family: 'Inconsolata', monospace;
@@ -133,8 +134,12 @@ nav {
 textarea:focus {
   border: 3px solid var(--color-title-text);
   outline: none;
-  box-shadow: 3px 0 30px rgba(163, 163, 163, 0.4);
+  box-shadow: 3px 0 7px rgba(163, 163, 163, 0.4);
   width: 100%;
+}
+
+.group__form-incorrect textarea {
+  border: 3px solid #bb2929;
 }
 
 input:-webkit-autofill,
@@ -234,8 +239,12 @@ footer p {
   position: fixed;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
   opacity: 0;
   left: 0;
+  padding: 1rem 0;
   top: var(--header-height);
   width: 100%;
   pointer-events: none;
@@ -251,7 +260,11 @@ footer p {
 }
 
 .navbar-active {
+  background-color: var(--color-navbar-active-bg);
   opacity: 1;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   pointer-events: auto;
 }
 
@@ -418,6 +431,12 @@ h3 {
   width: 2.5rem;
 }
 
+.skill svg {
+  width: 100%;
+  fill: var(--color-pri-text);
+  transition: fill 0.7s ease-in-out;
+}
+
 .work-info div {
   display: flex;
   width: 100%;
@@ -445,10 +464,6 @@ h3 {
   color: var(--color-title-text);
 }
 
-.skill div:last-child {
-  display: none;
-}
-
 .work-card {
   display: flex;
   position: relative;
@@ -461,6 +476,100 @@ h3 {
   min-height: 15rem;
   margin: 1rem 0 1rem 0;
   transition: transform 1s ease-in-out;
+}
+
+.work-card button {
+  position: absolute;
+  bottom: 1rem;
+  left: 23%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  height: 56px;
+  color: var(--color-pri-text);
+  font: 600 var(--font-family) calc(var(--p-size) + 1vw)/var(--p-size);
+  text-align: center;
+  background-color: #32312e;
+  border-radius: 6px;
+  border-color: transparent;
+  padding: 1rem;
+  margin: 1rem;
+  z-index: 100;
+}
+
+.modal-container {
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  pointer-events: none;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-base-bg);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 1.7rem;
+  width: 90%;
+  max-width: 600px;
+}
+
+.modal-container svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  fill: var(--color-title-text);
+  width: 3rem;
+  height: 3rem;
+  z-index: inherit;
+}
+
+.modal p {
+  padding: 1rem 0;
+  margin: 0;
+  text-align: center;
+}
+
+.container-project-m {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  flex-basis: 50%;
+}
+
+.group__form-btn-form div {
+  width: 100%;
+  text-align: center;
+}
+
+.modal div:last-child {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .container-project {
@@ -491,7 +600,7 @@ h3 {
   box-sizing: border-box;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   z-index: 99;
   pointer-events: auto;
@@ -515,7 +624,6 @@ h3 {
   margin: 1rem 1rem;
 }
 
-.work-info button,
 .btn__form {
   display: flex;
   flex-flow: column nowrap;
@@ -562,6 +670,14 @@ h3 {
   text-align: center;
 }
 
+.line2 {
+  border-top: 1px solid var(--color-title-text);
+  height: 1px;
+  width: 90%;
+  padding: 0;
+  text-align: center;
+}
+
 .form {
   display: flex;
   flex-flow: column nowrap;
@@ -588,6 +704,13 @@ h3 {
   justify-content: center;
   align-items: center;
   width: 80%;
+}
+
+.group__form-btn-form p {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .label__form {
@@ -618,17 +741,22 @@ h3 {
   display: none;
 }
 
+.input-error__form-active {
+  display: block;
+}
+
 .input__form:focus {
   border: 3px solid var(--color-title-text);
   outline: none;
-  box-shadow: 3px 0 15px rgba(163, 163, 163, 0.4);
+  box-shadow: 3px 0 7px rgba(163, 163, 163, 0.4);
 }
 
 .validation-state__form {
   position: absolute;
   right: 10px; /* Position from right to left */
-  bottom: 15px;
-  z-index: 1000;
+  bottom: 10px;
+  top: 10px;
+  z-index: 99;
   font-size: 1em;
   opacity: 0; /* It doesn't show until I want to */
 }
@@ -639,6 +767,69 @@ h3 {
 
 .submit-success__form {
   display: none;
+}
+
+.modal a {
+  font-size: 1.1rem;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+  color: var(--color-title-text);
+}
+
+.html5:hover svg {
+  fill: #fc490b;
+}
+
+.css:hover svg {
+  fill: #2196f4;
+}
+
+.js:hover svg {
+  fill: #ffdf00;
+}
+
+.scss:hover svg {
+  fill: #ca669b;
+}
+
+.git:hover svg {
+  fill: #f25234;
+}
+
+/* Validation styles */
+.group__form-correct .validation-state__form {
+  color: var(--color-title-text);
+  opacity: 1;
+}
+
+.group__form-incorrect .validation-state__form {
+  color: #bb2929;
+  opacity: 1;
+}
+
+.group__form-incorrect label {
+  color: #bb2929;
+}
+
+.group__form-incorrect p {
+  color: #bb2929;
+}
+
+label.group__form-incorrect {
+  color: #bb2929;
+}
+
+.group__form-incorrect .input__form {
+  border: 3px solid #bb2929;
+}
+
+.group__form-incorrect .label__form {
+  color: #bb2929;
+}
+
+.group__form p {
+  width: 100%;
+  margin: 0.2rem;
+  padding: 0;
 }
 
 .btn__form:hover {
@@ -673,18 +864,15 @@ h3 {
   margin-top: 5vh;
 }
 
-.skill:hover div:last-child {
-  display: block;
-}
-
-.skill:hover div:first-child {
-  display: none;
-}
-
 a:active {
   color: var(--color-title-text);
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   opacity: 0.7;
+}
+
+.menu-btn:active {
+  transform: rotate(360deg);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .navbar a:hover {
@@ -724,6 +912,7 @@ a:active {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    background-color: var(--color-base-bg);
     opacity: 1;
     left: 0;
     top: var(--header-height);
@@ -780,11 +969,6 @@ a:active {
     height: 5rem;
   }
 
-  .skill img {
-    width: 40rem;
-    margin-bottom: 1rem;
-  }
-
   .contacts {
     flex-flow: row wrap;
     justify-content: center;
@@ -831,6 +1015,21 @@ a:active {
 
 /* Landscape styles */
 @media screen and (orientation: landscape) {
+  .modal {
+    flex-direction: row;
+    width: 90%;
+    max-width: 1024px;
+    max-height: 90%;
+  }
+
+  .modal img {
+    width: 70%;
+  }
+
+  .modal p {
+    flex-basis: 50%;
+  }
+
   .presentation-container {
     width: 50%;
     margin: 0 1rem;
@@ -1026,7 +1225,7 @@ a:active {
   .works,
   .my-skills {
     padding-top: 2rem;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     padding-bottom: var(--header-height);
   }
 
@@ -1080,6 +1279,12 @@ a:active {
     width: 60%;
     padding: 1rem 1rem 1rem 1rem;
     margin-left: auto;
+  }
+
+  .group__form p {
+    width: 100%;
+    margin: 0.2rem;
+    padding: 0;
   }
 
   footer > div > div:last-child {

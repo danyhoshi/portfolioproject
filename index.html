@@ -12,6 +12,7 @@
     <meta name="keywords" content="HTML, CSS, JavaScript, Portfolio, Developer, Frontend">
     <meta name="author" content="Daniela González">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inconsolata:wght@400;700;900&family=Inter:wght@400;500;600&display=swap');
     </style>
@@ -40,14 +41,12 @@
                     <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M12.45 38.7 9.3 35.55 20.85 24 9.3 12.5l3.15-3.2L24 20.8 35.55 9.3l3.15 3.2L27.2 24l11.5 11.55-3.15 3.15L24 27.2Z"/></svg>
                 </div>
             </button>
-         <nav>
-            <ul class="navbar">
-                <li><a href="#aboutme">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Pet-Projects</a></li>
-                <li><a href="#contacts">Contacts</a></li>
-            </ul>
-         </nav>   
+        <ul class="navbar">
+            <li><a href="#aboutme">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Pet-Projects</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+        </ul>  
             
         </header>
         <main>
@@ -87,56 +86,62 @@
             </section>
             <h3 id="skills" class="title-section">My Skills</h3>
             <section class="my-skills">
-                <div class="skill">
-                    <div><img width="114" height="129" src="./img/icon-html.webp" alt="icon-html"></div>
-                    <div><img width="114" height="129" src="./img/icon-html-hover.webp" alt="icon-html-hover"></div>
+                <div class="skill html5">
+                    <div><svg width="114" height="129" viewBox="0 0 114 129" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H113.459L103.058 115.271L57.0445 128.271L10.164 115.271L0 0ZM92.4217 19.3037H21.1948L24.898 61.9296H74.1422L72.724 80.8393L56.8082 85.1728L40.8925 80.8393L39.7894 69.4147H25.6859L27.6556 91.6337L56.8082 99.6703L85.8032 91.5549L89.5852 47.9836H37.8984L36.4802 32.777H91.161L92.4217 19.3037Z"/>
+                        </svg></div>
                     HTML5
                  </div>
-                 <div class="skill">
-                     <div><img width="114" height="129" src="./img/icon-css.webp" alt="icon-css"></div><div><img width="114" height="129" src="./img/icon-css-hover.webp" alt="icon-css-hover"></div> CSS3
+                 <div class="skill css">
+                     <div><svg width="114" height="129" viewBox="0 0 114 129" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.38419e-05 0H113.283L102.899 115.092L56.9561 128.073L10.1483 115.092L2.38419e-05 0ZM21.0832 23.2859H91.9637L85.5128 95.5824L56.6415 103.607L27.6127 95.5824L25.4887 73.5552H39.413L40.357 84.8048L56.6415 89.1316L72.4539 84.8048L74.1846 66.003H24.8593L23.522 51.9213H75.2859L76.5446 37.2889H22.2633L21.0832 23.2859Z"/>
+                        </svg></div> CSS3
                  </div>
-                  <div class="skill">
-                     <div><img width="128" height="128" src="./img/icon-js.webp" alt="icon-js"></div><div><img width="128" height="128" src="./img/icon-js-hover.webp" alt="icon-js-hover"></div> JavaScript
+                  <div class="skill js">
+                     <div><svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H128V128H0V0ZM69.4589 58.6666H57.851V101.208C57.851 102.463 56.7843 107.608 51.3883 107.357C45.9922 107.106 43.5451 101.082 43.5451 101.082L33.9451 106.98C33.9451 106.98 39.2785 117.898 50.0079 117.898C60.7373 117.898 69.4589 113.882 69.4589 101.208V58.6666ZM114.384 67.5765C110.35 60.5602 103.782 57.6466 96.9412 58.0392C90.1007 58.4318 80.1254 60.9977 79.8745 74.5412C79.6237 88.0846 96.1255 92.8 96.1255 92.8C103.004 95.6933 106.238 97.4064 106.039 101.333C105.295 106.157 102.086 107.42 97.9451 107.42C93.8039 107.42 89.69 105.561 85.8981 100.141L76.3608 105.663C81.4623 113.734 87.4667 118.023 97.9451 117.961C108.424 117.898 118.4 112.502 118.086 101.333C117.773 90.1647 112.376 87.2225 101.459 82.1333C94.2631 79.3103 92.1098 78.0549 91.7334 74.5412C91.3569 71.0275 93.8039 68.3922 97.3177 68.3922C100.831 68.3922 103.372 70.2755 105.161 73.6L114.384 67.5765Z"/>
+                        </svg></div> JavaScript
                   </div>
-                  <div class="skill">
-                     <div><img width="128" height="128" src="./img/icon-scss.webp" alt="icon-scss"></div><div><img width="128" height="128" src="./img/icon-scss-hover.webp" alt="icon-scss-hover."></div> SCSS3
+                  <div class="skill scss">
+                     <div><svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M128 64C128 99.3462 99.3462 128 64 128C28.6538 128 0 99.3462 0 64C0 28.6538 28.6538 0 64 0C99.3462 0 128 28.6538 128 64ZM54.3713 51.548C54.3713 51.548 54.0391 51.0504 53.7068 51.0504C53.3746 51.0504 53.1301 51.1583 53.0453 51.548C53.041 52.2082 53.1848 52.8726 53.5429 53.54C54.4346 55.2169 55.8641 56.5731 57.6935 57.6906C60.5153 59.497 64.1424 60.0521 68.1521 60.0147C71.0127 59.9975 74.2962 59.5991 77.7809 59.0181C82.4953 57.9063 86.7409 56.018 90.7305 53.7054C95.0739 50.9037 98.7168 47.1457 101.521 42.2501C101.696 41.9101 101.871 41.597 102.047 41.2839C102.998 39.5903 103.948 37.8972 104.675 31.9569C104.675 29.847 104.294 27.6854 103.348 25.4821C102.363 22.6416 99.9652 20.5562 96.873 18.8419C96.873 18.8419 90.7305 15.5211 82.4292 15.5211C74.1279 15.5211 67.6531 17.6798 67.6531 17.6798C62.2009 19.2316 56.53 21.6636 50.7197 24.6522C46.7877 26.6024 42.9894 29.0589 39.2644 31.7915C33.1866 35.9766 28.8461 41.3972 25.3196 47.3974C24.1158 49.8438 23.4068 52.3808 23.3277 55.0343C23.5909 58.7204 25.1355 62.1519 27.976 65.3275C31.1026 68.9431 34.6521 72.0338 38.6014 74.624L45.906 79.7699C46.8089 80.3864 47.6782 81.031 48.4614 81.7475C47.3677 82.3084 46.15 82.9693 44.7425 83.7551C39.9332 85.9944 35.4474 89.5885 31.1285 93.883C29.8068 95.547 28.754 97.3591 28.1399 99.5279C26.7161 104.557 27.6797 108.456 31.1285 111.149C32.3193 111.773 34.1876 112.145 36.6066 112.311C43.2037 112.276 48.0705 109.61 51.8803 105.338C55.1134 101.845 57.1657 97.198 57.5253 90.8944C57.6709 88.2606 57.1523 85.7504 55.9832 83.3616C57.924 82.7621 59.9697 82.4078 62.175 82.4263C70.1282 83.1209 77.4947 84.5232 78.7761 93.2171C78.5719 95.4161 77.5192 97.3864 75.4553 98.862C75.4553 98.862 73.7957 99.6919 74.2933 100.189C74.7909 100.687 75.7876 100.189 75.7876 100.189C78.7833 99.0547 80.722 96.8974 81.4325 93.5493C82.061 89.9452 80.4459 86.4762 77.4487 83.0907C75.0555 80.7177 72.0641 78.5417 64.6659 78.1102C62.3001 78.1217 60.127 78.2051 58.3566 78.4424C56.5156 78.7334 55.016 79.0607 53.4936 79.5627C52.1689 77.9675 50.5231 76.4323 48.561 74.9562L41.0895 69.1459C35.7739 64.9305 32.8687 60.4735 33.1204 55.6987C33.1607 48.4746 38.6877 40.4725 57.1931 30.6294C65.7547 25.9711 74.3882 23.5606 83.0922 23.3248C90.7161 23.5606 96.9334 25.1714 97.7015 32.1237C97.4138 37.9944 93.942 42.8153 88.7371 47.0652C82.0135 52.2571 74.2775 55.3823 65.1621 55.6987C60.452 55.5836 56.7098 54.3655 54.3713 51.548ZM51.14 85.388C49.2473 86.3637 47.4183 87.488 45.5893 88.6123C45.252 88.8196 44.9148 89.0269 44.5771 89.2333C40.7486 91.9083 38.0204 94.9645 36.2758 98.3644C35.597 99.6387 35.2533 101.039 35.1138 102.515C35.1051 105.041 36.3003 105.8 38.1023 105.669C41.649 105.886 45.0014 103.719 48.2302 100.024C50.3587 97.1894 51.7782 94.021 51.8832 90.2285C52.0001 88.3098 51.7116 86.7304 51.14 85.388Z"/>
+                        </svg>
+                        </div> SCSS3
                   </div>
-                  <div class="skill">
-                     <div><img width="129" height="128" src="./img/icon-git.webp" alt="icon-git"></div><div><img width="129" height="128" src="./img/icon-git-hover.webp" alt="icon-git-hover"></div> Git
+                  <div class="skill git">
+                     <div><svg width="129" height="128" viewBox="0 0 129 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17 0C7.6112 0 3.72467e-05 7.61116 3.72467e-05 17V33.1551H0V44.0195H3.72467e-05V64V111C3.72467e-05 120.389 7.6112 128 17 128H64.2498H111.5C120.888 128 128.5 120.389 128.5 111V64V17C128.5 7.61116 120.888 0 111.5 0H64.2498H17ZM3.72467e-05 44.0195H27.5528C29.5255 48.8193 34.2471 52.199 39.758 52.199C41.5519 52.199 43.2622 51.8409 44.8212 51.1923L78.3283 84.6994C77.6855 86.2525 77.3307 87.9551 77.3307 89.7405C77.3307 97.0253 83.2362 102.931 90.521 102.931C97.8058 102.931 103.711 97.0253 103.711 89.7405C103.711 82.4557 97.8058 76.5502 90.521 76.5502C89.0264 76.5502 87.5898 76.7988 86.2504 77.2569L53.013 44.0195H78.3782C80.3509 48.8193 85.0725 52.199 90.5834 52.199C97.8682 52.199 103.774 46.2936 103.774 39.0088C103.774 31.724 97.8682 25.8185 90.5834 25.8185C85.401 25.8185 80.9167 28.8073 78.76 33.1551H51.5815C49.4248 28.8073 44.9404 25.8185 39.758 25.8185C34.5756 25.8185 30.0913 28.8073 27.9346 33.1551H3.72467e-05V44.0195Z"/>
+                        </svg></div> Git
                   </div>
             </section>
             <h3 class="title-section">My Works</h3>
             <section id="projects" class="works">          
-                <div class="work-card">
-                    <div class="container-project"><img width="640" height="640" src="./img/project.webp" alt="project"></div>
-                    <div class="work-info">
-                        <h4>News Blog</h4>
-                        <h5>HTML, CSS, JS</h5>
-                        <div class="line"></div>
-                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt voluptate expedita impedit itaque mollitia, qui hic cupiditate magni quaerat.</p>
-                        <button aria-label="seeMore" type="button">See more &rarr;</button>
+                <template>
+                    <div class="work-card">
+                        <div class="container-project"><img></div>
+                        <div class="work-info">
+                            <h4></h4>
+                            <h5></h5>
+                            <div class="line"></div>
+                            <p class="text"></p>
+                        </div>
+                        <button aria-label="See more" type="button">See more &rarr;</button>
                     </div>
-                </div>
-                <div class="work-card">
-                    <div class="container-project"><img width="640" height="640" src="./img/project.webp" alt="project"></div>
-                    <div class="work-info">
-                        <h4>News Blog</h4>
-                        <h5>HTML, CSS, JS</h5>
-                        <div class="line"></div>
-                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt voluptate expedita impedit itaque mollitia, qui hic cupiditate magni quaerat.</p>
-                        <button aria-label="seeMore" type="button">See more &rarr;</button>
+
+                    <div class="modal-container">
+                        <div class="modal">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 96 960 960"><path d="m338 768 142-142 142 142 50-50-142-142 142-142-50-50-142 142-142-142-50 50 142 142-142 142 50 50Zm142.138 233q-88.138 0-165.625-33.084-77.488-33.083-135.417-91.012T88.084 741.625Q55 664.276 55 576.138 55 487 88.084 409.513q33.083-77.488 90.855-134.969 57.772-57.482 135.195-91.013Q391.557 150 479.779 150q89.221 0 166.827 33.454 77.605 33.453 135.012 90.802 57.407 57.349 90.895 134.877Q906 486.66 906 576q0 88.276-33.531 165.747-33.531 77.471-91.013 135.278-57.481 57.808-134.831 90.891Q569.276 1001 480.138 1001Z"/></svg>
+                            <div class="container-project-m"><img></div>
+                            <div>
+                                <h4></h4>
+                                <h5></h5>
+                                <div class="line2"></div>
+                                <p></p>
+                                <a></a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="work-card">
-                    <div class="container-project"><img width="640" height="640" src="./img/project.webp" alt="project"></div>
-                    <div class="work-info">
-                        <h4>News Blog</h4>
-                        <h5>HTML, CSS, JS</h5>
-                        <div class="line"></div>
-                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt voluptate expedita impedit itaque mollitia, qui hic cupiditate magni quaerat.</p>
-                        <button aria-label="seeMore" type="button">See more &rarr;</button>
-                    </div>
-                </div>
+                </template>
             </section>
         </main>
         <footer>
@@ -145,46 +150,35 @@
                 <form action="https://formspree.io/f/xwkjnvdr" method="POST" class="form">
                     <div class="group__form">
                         <label for="name" class="label__form">Name</label>
-                        <div class="group-input__form">
-                            <input type="text" class="input__form" name="name" id="name" placeholder="John" maxlength="30" required>
-                            <span class="validation-state__form material-symbols-outlined">cancel</span>
+                        <div class="group-input__form">         
+                            <input type="text" class="input__form" name="name" id="name" title="The name must only have letters and spaces." pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" placeholder="John" maxlength="30" required>                          
                         </div>
-                        <p class="input-error__form">The name must only have letters and spaces.</p>
-                    </div>
-                    
+                    </div>                    
                     <div class="group__form">
                         <label for="lastname" class="label__form">Last Name</label>
                         <div class="group-input__form">
-                            <input type="text" class="input__form" name="lastname" id="lastname" placeholder="Doe" maxlength="30" required>
-                            <span class="validation-state__form material-symbols-outlined">cancel</span>
+                            <input type="text" class="input__form" name="lastname" id="lastname" title="The lastname must only have letters and spaces." pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" placeholder="Doe" maxlength="30" required>
                         </div>
-                        <p class="input-error__form">The name must only have letters and spaces.</p>
                     </div>
-
-                <div class="group__form">
-                        <label for="email" class="label__form">Email</label>
-                        <div class="group-input__form">
-                            <input type="email" class="input__form" name="email" id="email" placeholder="johndoe@email.com" required>
-                            <span class="validation-state__form material-symbols-outlined">cancel</span>
-                        </div>
-                        <p class="input-error__form">Please insert a valid email address</p>
-                    </div>
-        
+                    <div class="group__form">
+                            <label for="email" class="label__form">Email</label>
+                            <div class="group-input__form">
+                                <input type="email" class="input__form" name="email" id="email" title="Please insert a valid email address." pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" placeholder="johndoe@email.com" required>
+                            </div>
+                    </div>        
                     <div class="group__form">
                         <label for="message" class="label__form">Message</label>
                         <div class="group-input__form">
-                            <textarea maxlength="500" rows="10" cols="60" name="message" placeholder="Let's talk about projects..." required></textarea>
+                            <textarea maxlength="500" rows="10" cols="60" name="message" data-pattern="^.{1,255}$" title="Please, insert max 500 characters." placeholder="Let's talk about projects..." required></textarea>
                         </div>
-                        <p class="input-error__form">Please insert a message</p>
-                    </div>
-        
-                    <div class="message__form">
+                    </div>        
+                   <div class="message__form">
                         <p><span class="material-symbols-outlined">warning</span><b>Error: </b>Please fill in the form correctly</p>
-                    </div>
-        
+                    </div>        
                     <div class="group__form-btn-form">
                         <button type="submit" class="btn__form gradient-hover-effect">Submit</button>
-                        <p class="submit-success__form">The form was sent successfully</p>
+                        <p class="submit-success__form">The form is sending... </p>
+                        <div class="submit-success__form"><img src="./assets/puff.svg" alt="loader"></div>
                     </div> 
                 </form>
             </section>
@@ -227,5 +221,6 @@
             </div>
         </footer>
     </div>
+    <script src="./js/script.js"></script>
 </body>
 </html>
