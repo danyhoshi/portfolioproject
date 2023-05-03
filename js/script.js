@@ -183,6 +183,10 @@ form.addEventListener('submit', () => {
     icon.classList.remove('group__form-correct');
   });
   document.querySelector('.message__form').classList.remove('message__form-active');
+  localStorage.removeItem('name');
+  localStorage.removeItem('lastname');
+  localStorage.removeItem('email');
+  localStorage.removeItem('message');
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -193,3 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('[name=\'message\']').value = localStorage.getItem('message');
   }
 });
+
+window.onbeforeunload = () => {
+  form.reset();
+};

@@ -7,14 +7,15 @@
     <title>Daniela's Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="./css/style.css">
     <link rel="icon" href="./img/profile.webp">
     <meta name="description" content="Portfolio">
     <meta name="keywords" content="HTML, CSS, JavaScript, Portfolio, Developer, Frontend">
     <meta name="author" content="Daniela González">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inconsolata:wght@400;700;900&family=Inter:wght@400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
     </style>
     <!-- Google tag (gtag.js) -->
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-W2NFPP5BHV"></script>
@@ -169,7 +170,7 @@
                     <div class="group__form">
                         <label for="message" class="label__form">Message</label>
                         <div class="group-input__form">
-                            <textarea maxlength="500" rows="10" cols="60" name="message" data-pattern="^.{1,255}$" title="Please, insert max 500 characters." placeholder="Let's talk about projects..." required></textarea>
+                            <textarea maxlength="500" rows="10" cols="60" name="message" data-pattern="^.{1,500}$" title="Please, insert max 500 characters." placeholder="Let's talk about projects..." required></textarea>
                         </div>
                     </div>        
                    <div class="message__form">
